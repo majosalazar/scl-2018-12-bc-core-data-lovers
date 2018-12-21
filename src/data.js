@@ -2,7 +2,7 @@
 // puedes ver como agregamos la función a nuestro objeto global window
 
 const dataPokemon = POKEMON.pokemon;
-console.log(dataPokemon);
+console.log(dataPokemon + 'hola');
 
 const namesPokemon = (dataPokemon) => {
   let names = [];
