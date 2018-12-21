@@ -1,6 +1,6 @@
 const resultNames = namesPokemon(dataPokemon);
 const resultImgs = imgsPokemon(dataPokemon);
-//console.log(resultNames)
+console.log(resultNames)
 
 document.getElementById('btn').onclick = () => {
   document.getElementById('root').innerHTML = '';
