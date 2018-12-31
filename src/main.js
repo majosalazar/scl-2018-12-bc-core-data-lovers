@@ -1,21 +1,17 @@
-const resultNames = namesPokemon(dataPokemon);
-const resultImgs = imgsPokemon(dataPokemon);
-console.log(resultNames)
 
-document.getElementById('btn').onclick = () => {
-  document.getElementById('root').innerHTML = '';
-  for (let i = 0; i < resultNames.length; i++) {
-    document.getElementById('root').innerHTML += '<div>' + resultNames[i] + '</div>';
-  }
-}
+const resultImgs = imgsPokemon(dataPokemon); 
 
 document.getElementById('btn-img').onclick = () => {
   document.getElementById('root').innerHTML = '';
-  for (let h = 0; h < resultImgs.length; h++) {
-    document.getElementById('root').innerHTML += '<img src="' + resultImgs[h] + '">';
+  for (let i = 0; i < resultImgs.length; i++) {
+    document.getElementById('root').innerHTML += '<img src="' + resultImgs[i] + '">';
   }
 }
-
-document.getElementById('prueba').onclick = () => {
- 
+//Boton tipo Grass
+  document.getElementById("grass").onclick = () => {
+   document.getElementById("root").innerHTML = "";
+    for (let i = 0; i < typeGrass.length; i++) {
+     document.getElementById("root").innerHTML += '<img src="' + typeGrass[i] + '">';
+     // document.getElementById("root").innerHTML +=  typeGrass[i].name;
+}
 }
