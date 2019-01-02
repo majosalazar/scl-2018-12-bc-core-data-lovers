@@ -6,6 +6,24 @@ document.getElementById('btn').onclick = () => {
   }
 }
 
+//prueba 
+document.getElementById('btn-prueba').onclick = () => {
+  document.getElementById('root').innerHTML = '';
+  const cartaPokemon = dataPokemon.map(({num, name, img, type}) => 
+  
+  //[`${num} ${name} ${img} ${type}`]);
+  document.getElementById('root').innerHTML += `
+  <div><p>${num}</p>
+  <img src=${img}>
+  <p>${name}</p>
+  <p>${type}</p>
+
+  
+  </div>
+  `
+  );
+}
+
 //imprime en la pantalla todas las imagenes 
 document.getElementById('btn-img').onclick = () => {
   document.getElementById('root').innerHTML = '';
