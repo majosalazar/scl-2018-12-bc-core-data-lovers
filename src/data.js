@@ -15,11 +15,13 @@ window.imgsPokemon = imgsPokemon;
 
 //Clasifico por tipo
 let i=0;
-const typeGrass = dataPokemon.filter((types) => types.type[i]==="Grass")
-.map((types)=>{return types.img;}); 
+const typeGrass = dataPokemon.filter((types) => types.type[i] === "Grass")
+.map((types)=>{return types.img;});
+
 //.map((types)=>{return types.name;}); 
 //.map((types)=>{return types.name && types.img;}); 
 //window.typeGrass = typeGrass;
+
 
 
 const typePoison = dataPokemon.filter((types) => types.type[i] === "Poison")
