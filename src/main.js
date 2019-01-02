@@ -1,27 +1,29 @@
+
+//prueba 
+dataPokemon.map(({num, name, img}) => 
+document.getElementById('main').innerHTML += `
+<div class="col-4">
+    <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+    <p>${num}</p>
+    <p>${name}</p>
+    <a href="#" class="card-link">Ver más</a>
+    </div>
+  </div>
+</div>
+
+`
+);
+document.getElementById('btn-prueba').onclick = () => {
+}
+
 //mostrar nombre
 document.getElementById('btn').onclick = () => {
   document.getElementById('root').innerHTML = '';
   for (let i = 0; i < namesPokemon.length; i++) {
     document.getElementById('root').innerHTML += '<div>' + namesPokemon[i] + '</div>';
   }
-}
-
-//prueba 
-document.getElementById('btn-prueba').onclick = () => {
-  document.getElementById('root').innerHTML = '';
-  const cartaPokemon = dataPokemon.map(({num, name, img, type}) => 
-  
-  //[`${num} ${name} ${img} ${type}`]);
-  document.getElementById('root').innerHTML += `
-  <div><p>${num}</p>
-  <img src=${img}>
-  <p>${name}</p>
-  <p>${type}</p>
-
-  
-  </div>
-  `
-  );
 }
 
 //imprime en la pantalla todas las imagenes 
