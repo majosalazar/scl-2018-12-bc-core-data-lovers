@@ -12,19 +12,20 @@ const namesPokemon = (dataPokemon) => {
   return names;
 }
 */
+//guarda el numero de los pokemons
+const numsPokemon = dataPokemon.map(({num}) => [`${num}`]);
 
-const namesPokemon = dataPokemon.map(({num, name, img, type,
-}) => [`${num} ${name} ${img} ${type}`]);
-
+//guarda el nombre de los pokemones
+const namesPokemon = dataPokemon.map(({name}) => [`${name}`]);
+console.log(namesPokemon)
 window.namesPokemon = namesPokemon;
 
-const imgsPokemon = (dataPokemon) => {
-  let imgs = [];
-  for (let i = 0; i < dataPokemon.length; i++) {
-    imgs.push(dataPokemon[i].img)
-  }
-  return imgs;
-}
+//guarda la imagen de los pokemons
+const imgsPokemon = dataPokemon.map(({img}) => [`${img}`]);
+
+//guarda el tipo de los pokemones
+const typesPokemon = dataPokemon.map(({type}) => [`${type}`])
+
 
 window.imgsPokemon = imgsPokemon;
 
