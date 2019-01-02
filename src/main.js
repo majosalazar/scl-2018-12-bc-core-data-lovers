@@ -1,5 +1,4 @@
-
-
+//mostrar nombre
 document.getElementById('btn').onclick = () => {
   document.getElementById('root').innerHTML = '';
   for (let i = 0; i < namesPokemon.length; i++) {
@@ -10,8 +9,8 @@ document.getElementById('btn').onclick = () => {
 //imprime en la pantalla todas las imagenes 
 document.getElementById('btn-img').onclick = () => {
   document.getElementById('root').innerHTML = '';
-  for (let h = 0; h < resultImgs.length; h++) {
-    document.getElementById('root').innerHTML += '<img src="' + resultImgs[h] + '">';
+  for (let h = 0; h < imgsPokemon.length; h++) {
+    document.getElementById('root').innerHTML += '<img src="' + imgsPokemon[h] + '">';
   }
 }
 
