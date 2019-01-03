@@ -1,6 +1,3 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
 const dataPokemon = POKEMON.pokemon;
 console.log(dataPokemon);
 
@@ -16,7 +13,8 @@ const imgsPokemon = dataPokemon.map(({img}) => [`${img}`]);
 //guarda el tipo de los pokemones
 const typesPokemon = dataPokemon.map(({type}) => [`${type}`])
 
-
+//guarda el id de los pokemones
+const idPokemon = dataPokemon.map(({id}) => [`${id}`])
 
 //prueba filter
 const filterPokemonName = dataPokemon.filter(dataPokemon => (dataPokemon.name === 'Bulbasour'));
@@ -24,7 +22,7 @@ const filterPokemonName = dataPokemon.filter(dataPokemon => (dataPokemon.name ==
 window.filterPokemonName = filterPokemonName;
 
 
-
+/*
 window.data = {
   filterData: (dataPokemon, searchPokemon) => {
     const filterPokemonName = dataPokemon.filter(dataPokemon => (dataPokemon.name === searchPokemon));
@@ -40,3 +38,4 @@ window.data = {
 
   }
 }
+*/
