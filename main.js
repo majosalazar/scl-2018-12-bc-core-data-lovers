@@ -18,18 +18,16 @@ document.getElementById('listPokemon').innerHTML += `
 dataPokemon.map(({id, num, name, img, type, height, weight, weaknesses, prev_evolution, next_evolution, spawn_chance}) => 
 document.getElementById(`${id}`).onclick = () => {
   document.getElementById('main').innerHTML += `
-  <div class="col-10">
-    <div class="card w-100" style="width: 15rem;">
-      <img class="card-img-top" src=${img}>
-      <div class="card-body">
-        <p>${num}</p>
-        <p>${name}</p>
-        <p>${type}</p>
-        <p>${height}</p>
-        <p>${weight}</p>
-        <p>${weaknesses}</p>
-        <p>${prev_evolution}</p>
-      </div>
+  <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+      <p>${num}</p>
+      <p>${name}</p>
+      <p>${type}</p>
+      <p>${height}</p>
+      <p>${weight}</p>
+      <p>${weaknesses}</p>
+      <p>${prev_evolution}</p>
     </div>
   </div>
   `
