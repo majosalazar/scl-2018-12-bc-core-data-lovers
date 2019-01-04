@@ -11,8 +11,7 @@ document.getElementById('btn-img').onclick = () => {
   document.getElementById("grass").onclick = () => {
    document.getElementById("root").innerHTML = "";
     for (let i = 0; i < typeGrass.length; i++) {
-     document.getElementById("root").innerHTML += '<img src="' + typeGrass[i] + '">';
-     // document.getElementById("root").innerHTML +=  typeGrass[i].name;
+    document.getElementById("root").innerHTML += '<img src="' + typeGrass[i] + '">';
 }
 }
 //Boton tipo Poison

@@ -14,9 +14,21 @@ const imgsPokemon = (dataPokemon) => {
 window.imgsPokemon = imgsPokemon;
 
 //Clasifico por tipo
+
 let i=0;
+let grass = [];
 const typeGrass = dataPokemon.filter((types) => types.type[i] === "Grass")
-.map((types)=>{return types.img;});
+const prueba = typeGrass.forEach((element) => {
+  grass.push(element.name, element.img)
+});
+
+//.map((types => types.img + types.name));
+console.log(grass);
+
+const ent = typeGrass.forEach((element) => {
+  console.log(Object.entries(element))
+});
+
 
 //.map((types)=>{return types.name;}); 
 //.map((types)=>{return types.name && types.img;}); 
