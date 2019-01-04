@@ -12,14 +12,14 @@ const imgsPokemon = dataPokemon.map(({img}) => [`${img}`]);
 
 //guarda el tipo de los pokemones
 const typesPokemon = dataPokemon.map(({type}) => [`${type}`])
+const typesOnePokemon = typesPokemon.map(({}))
+
 
 //guarda el id de los pokemones
 const idPokemon = dataPokemon.map(({id}) => [`${id}`])
 
 //prueba filter
 const filterPokemonName = dataPokemon.filter(dataPokemon => (dataPokemon.name === 'Bulbasour'));
-
-window.filterPokemonName = filterPokemonName;
 
 
 /*
