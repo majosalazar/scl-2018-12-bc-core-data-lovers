@@ -87,12 +87,4 @@ const typeSteel = dataPokemon.filter((types) => types.type[i]==="Steel")
 const typeDragon= dataPokemon.filter((types) => types.type[i]==="Dragon")
 .map((types)=>{return types.img;});
 
-
-
-
-console.log(typeFlying);
-console.log(typeDark);
-console.log(typeSteel);
-console.log(typePoison);
-
 window.typesPokemon;
