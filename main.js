@@ -1,3 +1,45 @@
+//muestra todos los pokemones en cartas individuales en la pagina inicial
+dataPokemon.map(({num, name, img, id}) => 
+document.getElementById('listPokemon').innerHTML += `
+<div class="col-4">
+  <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+      <p>${num}</p>
+      <p>${name}</p>
+      <button class="btn" id="${id}"><i class="fas fa-plus"></i></button>
+    </div>
+  </div>
+</div>
+`
+);
+
+//entrar a carta principal de un pokemon
+dataPokemon.map(({id, num, name, img, type, height, weight, weaknesses, prev_evolution, next_evolution, spawn_chance}) => 
+document.getElementById(`${id}`).onclick = () => {
+  console.log(typesPokemon);
+  document.getElementById('main').innerHTML += `
+  <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+      <p>${num}</p>
+      <p>${name}</p>
+      <button class="${type[0]}">${type[0]}</button>
+      <button class="${type[1]}">${type[1]}</button>
+      <button class="${type[2]}">${type[2]}</button>
+      <button class="${type[3]}">typesPokemon</button>
+      <p>${type[0]}</p>
+      <p>${height}</p>
+      <p>${weight}</p>
+      <p>${weaknesses}</p>
+      <p>${prev_evolution}</p>
+      <p>${next_evolution}</p>
+      <p>${spawn_chance}</p>
+    </div>
+  </div>
+  `
+});
+
 /*
 const resultImgs = imgsPokemon(dataPokemon); 
 
@@ -10,12 +52,12 @@ document.getElementById('btn-img').onclick = () => {
 */
 
 //Boton tipo Grass
-  document.getElementById("grass").onclick = () => {
-   document.getElementById("root").innerHTML = "";
-    for (let i = 0; i < typeGrass.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeGrass[i] + '">';
-    }
+document.getElementById("grass").onclick = () => {
+ document.getElementById("root").innerHTML = "";
+  for (let i = 0; i < typeGrass.length; i++) {
+  document.getElementById("root").innerHTML += '<img src="' + typeGrass[i] + '">';
   }
+}
 //Boton tipo Poison
 document.getElementById("poison").onclick = () => {
   document.getElementById("root").innerHTML = "";
@@ -136,51 +178,6 @@ document.getElementById("dragon").onclick = () => {
    }
   }
   
-
-//muestra todos los pokemones en cartas individuales en la pagina inicial
-dataPokemon.map(({num, name, img, id}) => 
-document.getElementById('listPokemon').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    <button class="btn" id="${id}"><i class="fas fa-plus"></i></button>
-    </div>
-  </div>
-</div>
-`
-);
-
-//entrar a carta principal de un pokemon
-dataPokemon.map(({id, num, name, img, type, height, weight, weaknesses, prev_evolution, next_evolution, spawn_chance}) => 
-document.getElementById(`${id}`).onclick = () => {
-  console.log(typesPokemon);
-  document.getElementById('main').innerHTML += `
-  <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-      <p>${num}</p>
-      <p>${name}</p>
-      <button class="${type[0]}">${type[0]}</button>
-      <button class="${type[1]}">${type[1]}</button>
-      <button class="${type[2]}">${type[2]}</button>
-      <button class="${type[3]}">typesPokemon</button>
-      <p>${type[0]}</p>
-      <p>${height}</p>
-      <p>${weight}</p>
-      <p>${weaknesses}</p>
-      <p>${prev_evolution}</p>
-      <p>${next_evolution}</p>
-      <p>${spawn_chance}</p>
-    </div>
-  </div>
-  `
-});
-
-
-
 /*
 dataPokemon.forEach(function(element){
   console.log(element);
