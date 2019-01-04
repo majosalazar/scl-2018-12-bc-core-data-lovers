@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -14,6 +15,13 @@
 </head>
 
 <body>
+    <!-- Contenedor para splash -->           
+  <div class="d-flex justify-content-center">
+    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -71,6 +79,31 @@
       </div>
     </div>
   </section>
+  
+  <!-- seccion botones por tipo -->
+  <div class="btn-flex justify-content-center">
+      <button class="btn fire " id="fire">FIRE</button>
+      <button class="btn ice"    id="ice">ICE</button>
+      <button class="btn flying" id="flying">FLYING</button>
+      <button class="btn psychic" id="psychic">PSYCHIC</button>
+      <button class=" btn grass"  id="grass">GRASS</button>
+      <button class="btn poison" id="poison">POISON</button>
+      <button class="btn water" id="water">WATER</button>
+      <button class="btn ground" id="ground">GROUND</button>
+      <button class="btn rock" id="rock">ROCK</button>
+      <button class="btn electric" id="electric">ELECTRIC</button>
+      <button class="btn bug" id="bug">BUG</button>
+      <button class="btn normal" id="normal">NORMAL</button>
+      <button class="btn fighting" id="fighting">FIGHTING</button>
+      <button class="btn fairy" id="fairy">FAIRY</button>
+      <button class="btn dark" id="dark">DARK</button>
+      <button class="btn ghost" id="ghost">GHOST</button>
+      <button class="btn steel" id="steel">STEEL</button>
+      <button class="btn dragon" id="dragon">DRAGON</button>
+  </div>
+  
+  <!-- Contenedor para un tipo de pokemon -->
+  <div id="root"></div>  
 
   <!-- seccion donde se muestran los pokemones -->
   <section class="container-fluid">
@@ -84,12 +117,8 @@
       <div class="col-1"></div>
       <div class="col-10" id="main"></div>
       <div class="col-1"></div>
-
-
     </div>
   </section>
-
-
 
 
   <!-- enlaces bootstrap -->
