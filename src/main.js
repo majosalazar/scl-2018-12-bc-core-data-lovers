@@ -1,6 +1,6 @@
-//muestra todos los pokemones en cartas individuales en la pagina inicial
-dataPokemon.map(({num, name, img, id}) => 
-document.getElementById('listPokemon').innerHTML += `
+//muestra todos los pokemones en cartas individuales en la pagina inicial (es de )
+dataPokemon.map(({num,name,img,id}) =>
+  document.getElementById('listPokemon').innerHTML += `
 <div class="col-4">
   <div class="card w-100" style="width: 15rem;">
     <img class="card-img-top" src=${img}>
@@ -15,10 +15,9 @@ document.getElementById('listPokemon').innerHTML += `
 );
 
 //entrar a carta principal de un pokemon
-dataPokemon.map(({id, num, name, img, type, height, weight, weaknesses, prev_evolution, next_evolution, spawn_chance}) => 
-document.getElementById(`${id}`).onclick = () => {
-  console.log(typesPokemon);
-  document.getElementById('main').innerHTML += `
+dataPokemon.map(({id,num,name,img,type, height,weight,weaknesses,prev_evolution,next_evolution,spawn_chance}) =>
+  document.getElementById(`${id}`).onclick = () => {
+    document.getElementById('main').innerHTML += `
   <div class="card w-100" style="width: 15rem;">
     <img class="card-img-top" src=${img}>
     <div class="card-body">
@@ -38,146 +37,124 @@ document.getElementById(`${id}`).onclick = () => {
     </div>
   </div>
   `
-});
+  });
 
-/*
-const resultImgs = imgsPokemon(dataPokemon); 
+//Filtrar por tipo de Pokemon
 
-document.getElementById('btn-img').onclick = () => {
-  document.getElementById('root').innerHTML = '';
-  for (let i = 0; i < resultImgs.length; i++) {
-    document.getElementById('root').innerHTML += '<img src="' + resultImgs[i] + '">';
-  }
-}
-*/
-
-//Boton tipo Grass
-document.getElementById("grass").onclick = () => {
- document.getElementById("root").innerHTML = "";
-  for (let i = 0; i < typeGrass.length; i++) {
-  document.getElementById("root").innerHTML += '<img src="' + typeGrass[i] + '">';
-  }
-}
-//Boton tipo Poison
-document.getElementById("poison").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typePoison.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typePoison[i] + '">';
-   }
-  }
-  //Boton tipo Fire
+//Boton tipo Fire
 document.getElementById("fire").onclick = () => {
   document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeFire.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeFire[i] + '">';
-   }
-  }
-  //Boton tipo Ice
+  typeFire.map(({num,name,img}) => document.getElementById('root').innerHTML += `
+<div class="col-4">
+    <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+    <p>${num}</p>
+    <p>${name}</p>
+    </div>
+  </div>
+</div>
+`);
+}
+//Boton tipo Ice
 document.getElementById("ice").onclick = () => {
   document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeIce.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeIce[i] + '">';
-   }
-  }
-  //Boton tipo Flying
+  typeIce.map(({num,name,img}) => document.getElementById('root').innerHTML += `
+<div class="col-4">
+    <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+    <p>${num}</p>
+    <p>${name}</p>
+    </div>
+  </div>
+</div>
+`);
+}
+//Boton tipo Volador
 document.getElementById("flying").onclick = () => {
   document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeFlying.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeFlying[i] + '">';
-   }
-  }
-  //Boton tipo Psychic
+  typeFlying.map(({num,name,img}) => document.getElementById('root').innerHTML += `
+<div class="col-4">
+    <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+    <p>${num}</p>
+    <p>${name}</p>
+    </div>
+  </div>
+</div>
+`);
+}
+
+//Boton tipo Psychic
 document.getElementById("psychic").onclick = () => {
   document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typePsychic.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typePsychic[i] + '">';
-   }
-  }
-  //Boton tipo Water
+  typePsychic.map(({num,name,img}) => document.getElementById('root').innerHTML += `
+<div class="col-4">
+    <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+    <p>${num}</p>
+    <p>${name}</p>
+    </div>
+  </div>
+</div>
+`);
+}
+//Boton tipo Hierba
+document.getElementById("grass").onclick = () => {
+  document.getElementById("root").innerHTML = "";
+  document.getElementById('root').innerHTML += "Existe: typeGrass.length";
+  typeGrass.map(({num,name,img}) =>
+    document.getElementById('root').innerHTML += `
+<div class="col-4">
+    <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+    <p>${num}</p>
+    <p>${name}</p>
+    </div>
+  </div>
+</div>
+`);
+}
+//Boton tipo Water
 document.getElementById("water").onclick = () => {
   document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeWater.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeWater[i] + '">';
-   }
-  }
-  //Boton tipo Ground
-document.getElementById("ground").onclick = () => {
+  typeWater.map(({num,name,img}) =>
+    document.getElementById('root').innerHTML += `
+<div class="col-4">
+    <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+    <p>${num}</p>
+    <p>${name}</p>
+    </div>
+  </div>
+</div>
+`);
+}
+
+//Boton tipo Water
+document.getElementById("water").onclick = () => {
   document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeGround.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeGround[i] + '">';
-   }
-  }
-  //Boton tipo Rock
-document.getElementById("rock").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeRock.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeRock[i] + '">';
-   }
-  }
-  //Boton tipo Electric
-document.getElementById("electric").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeElectric.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeElectric[i] + '">';
-   }
-  }
-  //Boton tipo Bug
-document.getElementById("bug").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeBug.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeBug[i] + '">';
-   }
-  }
-  //Boton tipo Normal
-document.getElementById("normal").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeNormal.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeNormal[i] + '">';
-   }
-  }
-  //Boton tipo Fighting
-document.getElementById("fighting").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeFighting.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeFighting[i] + '">';
-   }
-  }
-  //Boton tipo Fairy
-document.getElementById("fairy").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeFairy.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeFairy[i] + '">';
-   }
-  }
-   //Boton tipo Ghost
-document.getElementById("ghost").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeGhost.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeGhost[i] + '">';
-   }
-  }
-   //Boton tipo Dark
-document.getElementById("dark").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeDark.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeDark[i] + '">';
-   }
-  }
-   //Boton tipo Steel
-document.getElementById("steel").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeSteel.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeSteel[i] + '">';
-   }
-  }
-  //Boton tipo Dragon
-document.getElementById("dragon").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-   for (let i = 0; i < typeDragon.length; i++) {
-    document.getElementById("root").innerHTML += '<img src="' + typeDragon[i] + '">';
-   }
-  }
-  
+  typeWater.map(({num,name,img}) =>
+    document.getElementById('root').innerHTML += `
+<div class="col-4">
+    <div class="card w-100" style="width: 15rem;">
+    <img class="card-img-top" src=${img}>
+    <div class="card-body">
+    <p>${num}</p>
+    <p>${name}</p>
+    </div>
+  </div>
+</div>
+`);
+}
+
+
+
 /*
 dataPokemon.forEach(function(element){
   console.log(element);
@@ -193,4 +170,3 @@ document.getElementById('btnSearch').onclick = () => {
   document.getElementById('listPokemon').innerHTML = filterPokemonName;
   console.log(filterPokemonName);
 };
-
