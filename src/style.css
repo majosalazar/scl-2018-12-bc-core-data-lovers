@@ -1,3 +1,12 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
 .fire {
   box-shadow: 0px 2px 10px;
   background: #F05030;
@@ -90,18 +99,19 @@
 
 
 /* Stylo para carta Ppal 3D*/
+
 .wrap{
-	width: 1100px;
-	margin: 50px auto;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-}
+	width: 100%;
+	height: 100%;
+	 margin: 50px auto;
+	 display: -webkit-box;
+	 display: -webkit-flex;
+	 display: -ms-flexbox;
+	 display: flex;
+
+	 -webkit-box-pack: center;
+	 -ms-flex-pack: center;
+}	
 
 .tarjeta-wrap{
 	margin: 10px;
@@ -110,8 +120,8 @@
 }
 
 .tarjeta{
-	width: 300px;
-	height: 350px;
+	width: 200px;
+	height: 250px;
 	background: rgb(244, 250, 248);
 	position: relative;
 	-webkit-transform-style: preserve-3d;
@@ -120,7 +130,6 @@
 	transition: .7s ease;
 	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
 	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
-
 }
 
 .adelante, .atras{
@@ -142,12 +151,9 @@
 	transform: rotateY(180deg);
 
 	padding: 15px;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
+	
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	-webkit-box-align: center;
@@ -155,10 +161,11 @@
 	-ms-flex-align: center;
 	align-items: center;
 
-	text-align: center;
+	text-align:center;
 	color: #fff;
-	font-family: "open sans";
-  background:  rgb(42, 230, 158);
+	font-family: "arial";
+	font-size: 80%;
+  background:  #78C850;
 }
 
 .tarjeta-wrap:hover .tarjeta{
@@ -166,7 +173,15 @@
 	transform: rotateY(180deg);
 }
 
-.card1{
-	background-image: url(http://1.1m.yt/J9Kw7kl.jpg);
-	background-size: cover;
-}
+ p2{
+	text-align: center;
+	color:cornflowerblue;
+	font-family: "arial black";
+	font-size: 100%;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+ }
+ 
