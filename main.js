@@ -45,15 +45,22 @@ dataPokemon.map(({id,num,name,img,type, height,weight,weaknesses,prev_evolution,
 document.getElementById("fire").onclick = () => {
   document.getElementById("root").innerHTML = "";
   document.getElementById("root").innerHTML += "Existen: " + counterFire + "   Pokemones tipo Fuego";
-  typeFire.map(({num,name,img}) => document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
+  typeFire.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap">
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemon tipo: ${weaknesses}</p>
+          </div>
     </div>
   </div>
+</div>
 </div>
 `);
 }
@@ -337,16 +344,19 @@ document.getElementById("steel").onclick = () => {
 document.getElementById("dragon").onclick = () => {
   document.getElementById("root").innerHTML = "";
   document.getElementById("root").innerHTML += "Existen: " + counterDragon + "   Pokemones tipo Dragon";
-  typeDragon.map(({num,name,img}) =>
+  typeDragon.map(({num,name,img,height,weight,type,weaknesses}) =>
   document.getElementById('root').innerHTML += `
 <div class="wrap">
   <div class="tarjeta-wrap">
     <div class="tarjeta">
-      <div class="adelante card1" id="tarjetaPpal"></div>
-        <img class="card-img-top" src=${img}>
-          <div class="atras">
-            <p>${num}</p>
-            <p>${name}</p>
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemon tipo: ${weaknesses}</p>
           </div>
   </div>
 </div>
