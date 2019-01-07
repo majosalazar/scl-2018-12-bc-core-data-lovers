@@ -1,5 +1,4 @@
 const dataPokemon = POKEMON.pokemon;
-console.log(dataPokemon);
 
 //guarda el numero de los pokemons
 const numsPokemon = dataPokemon.map(({num}) => [`${num}`]);
@@ -10,9 +9,27 @@ const namesPokemon = dataPokemon.map(({name}) => [`${name}`]);
 //guarda la imagen de los pokemons
 const imgsPokemon = dataPokemon.map(({img}) => [`${img}`]);
 
+/*
 //guarda el tipo de los pokemones
-const typesPokemon = dataPokemon.map(({type}) => [`${type}`])
-const typesOnePokemon = typesPokemon.map(({}))
+const typesPokemon = dataPokemon.map(({type}) => [`${type}`]);
+console.log(typesPokemon);
+typesPokemon.forEach((element) => {
+  console.log(element);
+})
+
+
+//otro
+dataPokemon.forEach((element) => {
+  console.log(element.type);
+  const typesPokemon2 = element.type
+  const typePokemon = typesPokemon2.forEach((element) => {
+    console.log(element);
+    
+  })  
+});
+
+*/
+
 
 //guarda el id de los pokemones
 const idPokemon = dataPokemon.map(({id}) => [`${id}`])
@@ -31,10 +48,10 @@ const prueba = typeGrass.forEach((element) => {
 });
 
 //.map((types => types.img + types.name));
-console.log(grass);
+//console.log(grass);
 
 const ent = typeGrass.forEach((element) => {
-  console.log(Object.entries(element))
+  //console.log(Object.entries(element))
 });
 
 
