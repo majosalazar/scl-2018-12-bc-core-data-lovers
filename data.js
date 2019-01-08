@@ -1,43 +1,5 @@
 const dataPokemon = POKEMON.pokemon;
 
-//guarda el numero de los pokemons
-const numsPokemon = dataPokemon.map(({num}) => [`${num}`]);
-
-//guarda el nombre de los pokemones
-const namesPokemon = dataPokemon.map(({name}) => [`${name}`]);
-
-//guarda la imagen de los pokemons
-const imgsPokemon = dataPokemon.map(({img}) => [`${img}`]);
-
-/*
-//guarda el tipo de los pokemones
-const typesPokemon = dataPokemon.map(({type}) => [`${type}`]);
-console.log(typesPokemon);
-typesPokemon.forEach((element) => {
-  console.log(element);
-})
-
-
-//otro
-dataPokemon.forEach((element) => {
-  console.log(element.type);
-  const typesPokemon2 = element.type
-  const typePokemon = typesPokemon2.forEach((element) => {
-    console.log(element);
-    
-  })  
-});
-
-*/
-
-
-//guarda el id de los pokemones
-const idPokemon = dataPokemon.map(({id}) => [`${id}`])
-
-//prueba filter
-const filterPokemonName = dataPokemon.filter(dataPokemon => (dataPokemon.name === 'Bulbasour'));
-
-
 //Clasifico por tipo
 
 let i=0;
