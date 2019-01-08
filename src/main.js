@@ -29,14 +29,25 @@ dataPokemon.forEach((element) => {
     weaknessesPokemon.forEach((weaknesses) => {
       weaknessesPrint += `<button class="btn ${weaknesses.toLowerCase()}">${weaknesses}</button>`
     });
-    //permite mostrar las debilidades de un pokemon de forma invidividual
+
+    /*
+    //permite mostrar las pre evoluciones de un pokemon
     const prev_evolutionPokemon = element.prev_evolution
     let prev_evolutionPrint = '';   
     prev_evolutionPokemon.map(({num, name}) => {
       prev_evolutionPrint += `<p>${num}</p>
-      <p>${name}</p>`
+      <span>${name}</span>`
+    
     });
     
+    //permite mostrar las siguientes evoluciones de un pokemon
+    const next_evolutionPokemon = element.next_evolution
+    let next_evolutionPrint = '';   
+    next_evolutionPokemon.map(({num, name}) => {
+      next_evolutionPrint += `<p>${num}</p>
+      <p>${name}</p>`
+    });
+    */
     
 
     //imprime en la pantalla la tarjeta de un pokemon
@@ -48,13 +59,11 @@ dataPokemon.forEach((element) => {
       <div class="card-body">
         <p>${element.num}</p>
         <p>${element.name}</p>
-        <span>${typesPrint}</span>
-        <p>${element.height}</p>
-        <p>${element.weight}</p>
+        <span>Tipo: ${typesPrint}</span>
+        <p>Altura: ${element.height}</p>
+        <p>Peso: ${element.weight}</p>
         <span>${weaknessesPrint}</span>
-        <span>${prev_evolutionPrint}</span>
-        <p>${element.next_evolution}</p>
-        <p>${element.spawn_chance}</p>
+        <p>Rango de aparición: ${element.spawn_chance}</p>
       </div>
     </div>
     `
@@ -89,16 +98,6 @@ document.getElementById(`${id}`).onclick = () => {
 
 */
 
-/*
-const resultImgs = imgsPokemon(dataPokemon); 
-
-document.getElementById('btn-img').onclick = () => {
-  document.getElementById('root').innerHTML = '';
-  for (let i = 0; i < resultImgs.length; i++) {
-    document.getElementById('root').innerHTML += '<img src="' + resultImgs[i] + '">';
-  }
-}
-*/
 
 //Boton tipo Grass
 document.getElementById("grass").onclick = () => {
