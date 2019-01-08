@@ -43,10 +43,9 @@ dataPokemon.map(({id,num,name,img,type, height,weight,weaknesses,prev_evolution,
 
 //Boton tipo Fire
 document.getElementById("fire").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterFire + "   Pokemones tipo Fuego";
+ document.getElementById("root").innerHTML = "";
   typeFire.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap">
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
@@ -56,14 +55,15 @@ document.getElementById("fire").onclick = () => {
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemon tipo: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
     </div>
   </div>
 </div>
-</div>
 `);
+document.getElementById("root").innerHTML += "Existen: " + counterFire + "   Pokemones tipo Fuego";
 }
+
 //Boton tipo Ice
 document.getElementById("ice").onclick = () => {
   document.getElementById("root").innerHTML = "";
