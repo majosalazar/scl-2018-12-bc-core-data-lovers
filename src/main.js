@@ -14,16 +14,27 @@ document.getElementById('listPokemon').innerHTML += `
 `
 );
 
+//entrar a carta principal de un pokemon
 dataPokemon.forEach((element) => {
-  const typesPokemon = element.type
-  let typesPrint = '';
-  typesPokemon.forEach((type) => {
-    document.getElementById('prueba').innerHTML += 
-   `<button class="btn ${type.toLowerCase}">${type}</button>`
-    console.log(type);
-  });
-  
   document.getElementById(`${element.id}`).onclick = () => {
+    //permite mostrar los tipos de pokemon de forma invidividual
+    const typesPokemon = element.type
+    let typesPrint = '';
+    typesPokemon.forEach((type) => {
+      typesPrint += `<button class="btn ${type.toLowerCase()}">${type}</button>`
+    });
+    //permite mostrar las debilidades de un pokemon de forma invidividual
+    const weaknessesPokemon = element.weaknesses
+    let weaknessesPrint = '';
+    weaknessesPokemon.forEach((weaknesses) => {
+      weaknessesPrint += `<button class="btn ${weaknesses.toLowerCase()}">${weaknesses}</button>`
+    });
+
+    
+    
+    
+
+    //imprime en la pantalla la tarjeta de un pokemon
     document.getElementById('main').innerHTML += `
     <div class="card" style="width: 15rem;">
       <div class="w-100">
@@ -32,20 +43,17 @@ dataPokemon.forEach((element) => {
       <div class="card-body">
         <p>${element.num}</p>
         <p>${element.name}</p>
-        <button class="${typesPokemon}">${typesPokemon}</button>
+        <span>${typesPrint}</span>
         <p>${element.height}</p>
         <p>${element.weight}</p>
-        <p>${element.weaknesses}</p>
-        <p>${element.prev_evolution}</p>
+        <span>${weaknessesPrint}</span>
+        <span>${prev_evolutionPrint}</span>
         <p>${element.next_evolution}</p>
         <p>${element.spawn_chance}</p>
       </div>
     </div>
     `
   };
-
-
-
 });
 
 /*
