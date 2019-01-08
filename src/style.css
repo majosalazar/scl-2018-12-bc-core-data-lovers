@@ -71,6 +71,23 @@ box-shadow: 0px 2px 10px;
 background: #7860E0;
 }
 
-
-
+/* contenedores ocultos al cargar la pagina inicialmente */
+#sectionNav {
+  display: none;
+}
+#sectionSelect {
+  display: none;
+}
+#sectionList {
+  display: none;
+}
+#sectionMain {
+  display: none;
+}
+#sectionTypes {
+  display: none;
+}
+#root {
+  display: none;
+}
 

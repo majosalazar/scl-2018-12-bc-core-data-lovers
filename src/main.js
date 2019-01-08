@@ -2,8 +2,13 @@ window.onload = (() => {
   //funcion del splash
    setTimeout(() => {
     splash.style.display = 'none';
-    main.style.display = 'block';
-  }, 3000);  
+    sectionNav.style.display = 'block';
+    sectionSelect.style.display = 'block';
+    sectionList.style.display = 'block';
+    sectionMain.style.display = 'block';
+    sectionTypes.style.display = 'block';
+    root.style.display = 'block';
+  }, 4000);  
 });
 
 //muestra todos los pokemones en cartas individuales en la pagina inicial
