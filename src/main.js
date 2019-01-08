@@ -29,8 +29,13 @@ dataPokemon.forEach((element) => {
     weaknessesPokemon.forEach((weaknesses) => {
       weaknessesPrint += `<button class="btn ${weaknesses.toLowerCase()}">${weaknesses}</button>`
     });
-
-    
+    //permite mostrar las debilidades de un pokemon de forma invidividual
+    const prev_evolutionPokemon = element.prev_evolution
+    let prev_evolutionPrint = '';   
+    prev_evolutionPokemon.map(({num, name}) => {
+      prev_evolutionPrint += `<p>${num}</p>
+      <p>${name}</p>`
+    });
     
     
 
