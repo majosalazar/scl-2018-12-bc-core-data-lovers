@@ -1,3 +1,11 @@
+window.onload = (() => {
+  //funcion del splash
+   setTimeout(() => {
+    splash.style.display = 'none';
+    main.style.display = 'block';
+  }, 3000);  
+});
+
 //muestra todos los pokemones en cartas individuales en la pagina inicial
 dataPokemon.map(({num, name, img, id}) => 
 document.getElementById('listPokemon').innerHTML += `
