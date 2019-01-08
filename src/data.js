@@ -94,23 +94,5 @@ const typeDragon = dataPokemon.filter((types) => {return types.type.indexOf("Dra
 const counterDragon=typeDragon.length;
 
 window.typesPokemon;
-
-
-/*
-window.data = {
-  filterData: (dataPokemon, searchPokemon) => {
-    const filterPokemonName = dataPokemon.filter(dataPokemon => (dataPokemon.name === searchPokemon));
-    console.log(filterPokemonName);
-
-  },
-
-  sortData: (dataPokemon, sortBy, sortOrder) => {
-
-  },
-
-  computeStats: (dataPokemon) => {
-
-  }
-}
-*/
+window.dataPokemon;
 
