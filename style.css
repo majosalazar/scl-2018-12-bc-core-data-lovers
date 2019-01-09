@@ -1,5 +1,5 @@
 *{
-	margin: 0px;
+	margin: 0px auto;
 	padding: 0px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -99,8 +99,20 @@
 
 /* Stylo para carta Ppal 3D*/
 
+.result{
+	text-align: center;
+	font-size: 100%;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	vertical-align: text-top;
+ }
+
 .wrap{
-	margin: 15px auto;
+	max-width:1100px;
+	margin: 20px auto;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -129,7 +141,7 @@
 	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
 	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
 	border-radius: 5px;
-
+	
 }
 .adelante, .atras{
 	width: 100%;
@@ -157,7 +169,8 @@
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
-  text-align:center;
+	text-align:center;
+	-webkit-text-align:center;
 	color: #fff;
 	font-family: "arial";
 	font-size: 80%;
@@ -170,7 +183,7 @@
 	transform: rotateY(180deg);
 }
 
- p2{
+ p2, p3{
 	text-align: center;
 	color:cornflowerblue;
 	font-family: "arial black";
@@ -182,3 +195,6 @@
 	justify-content: center;
  }
  
+ p3{
+	 display: block;
+ }
