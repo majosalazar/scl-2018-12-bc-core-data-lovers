@@ -475,8 +475,9 @@ typeSteel.map(({num,name,img,height,weight,type,weaknesses}) => document.getElem
 //Boton tipo Dragon
 document.getElementById("dragon").onclick = () => {
 document.getElementById("root").innerHTML = "";
-document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterDragon}  Pokémon tipo Dragón </p3></div>`;
+document.getElementById("root").innerHTML+= `<div id="result"><p3> Existen:  ${counterDragon}  Pokémon tipo Dragón </p3></div>`;
 typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
 <div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
