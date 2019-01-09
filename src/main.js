@@ -39,12 +39,37 @@ dataPokemon.map(({id,num,name,img,type, height,weight,weaknesses,prev_evolution,
   `
   });
 
+
 //Filtrar por tipo de Pokemon
 
 //Boton tipo Fire
 document.getElementById("fire").onclick = () => {
- document.getElementById("root").innerHTML = "";
-  typeFire.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFire}  Pokémon tipo Fuego </p3></div>`;
+typeFire.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p> #: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}
+
+//Boton tipo Ice
+document.getElementById("ice").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterIce}  Pokémon tipo Hielo </p3></div>`;
+typeIce.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
 <div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
@@ -61,292 +86,14 @@ document.getElementById("fire").onclick = () => {
   </div>
 </div>
 `);
-document.getElementById("root").innerHTML += "Existen: " + counterFire + "   Pokemones tipo Fuego";
 }
 
-//Boton tipo Ice
-document.getElementById("ice").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterIce + "   Pokemones tipo Hielo";
-  typeIce.map(({num,name,img}) => document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
 //Boton tipo Volador
 document.getElementById("flying").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterFlying + "   Pokemones tipo Volador";
-  typeFlying.map(({num,name,img}) => document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-
-//Boton tipo Psychic
-document.getElementById("psychic").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterPsychic + "   Pokemones tipo Psíquico";
-  typePsychic.map(({num,name,img}) => document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-//Boton tipo Hierba
-document.getElementById("grass").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterGrass + "   Pokemones tipo Hierba";
-  typeGrass.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-//Boton tipo Poison
-document.getElementById("poison").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterPoison + "   Pokemones tipo Veneno";
-  typePoison.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-
-//Boton tipo Water
-document.getElementById("water").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterWater + "   Pokemones tipo Agua";
-  typeWater.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-//Boton tipo Ground
-document.getElementById("ground").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterGround + "   Pokemones tipo Tierra";
-  typeGround.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-//Boton tipo Rock
-document.getElementById("rock").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterRock + "   Pokemones tipo Roca";
-  typeRock.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-
-//Boton tipo Electric
-document.getElementById("electric").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterElectric + "   Pokemones tipo Eléctrico";
-  typeElectric.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-
-//Boton tipo Bug
-document.getElementById("bug").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterBug + "   Pokemones tipo Insecto";
-  typeBug.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-
-//Boton tipo Normal
-document.getElementById("normal").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterNormal + "   Pokemones tipo Normal";
-  typeNormal.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-
-//Boton tipo Fighting
-document.getElementById("fighting").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterFighting + "   Pokemones tipo Lucha";
-  typeFighting.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-
-//Boton tipo Fairy
-document.getElementById("fairy").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterFairy + "   Pokemones tipo Hada";
-  typeFairy.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-//Boton tipo Dark
-document.getElementById("dark").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterDark + "   Pokemones tipo Oscuridad";
-  typeDark.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-//Boton tipo Ghost
-document.getElementById("ghost").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterGhost + "   Pokemones tipo Fantasma";
-  typeGhost.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-//Boton tipo Steel
-document.getElementById("steel").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterSteel + "   Pokemones tipo Acero";
-  typeSteel.map(({num,name,img}) =>
-    document.getElementById('root').innerHTML += `
-<div class="col-4">
-    <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-    <p>${num}</p>
-    <p>${name}</p>
-    </div>
-  </div>
-</div>
-`);
-}
-//Boton tipo Dragon
-document.getElementById("dragon").onclick = () => {
-  document.getElementById("root").innerHTML = "";
-  document.getElementById("root").innerHTML += "Existen: " + counterDragon + "   Pokemones tipo Dragon";
-  typeDragon.map(({num,name,img,height,weight,type,weaknesses}) =>
-  document.getElementById('root').innerHTML += `
-<div class="wrap">
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFlying}  Pokémon tipo Volador </p3></div>`;
+typeFlying.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
@@ -356,12 +103,355 @@ document.getElementById("dragon").onclick = () => {
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemon tipo: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
+    </div>
   </div>
 </div>
 `);
 }
+
+//Boton tipo Psychic
+document.getElementById("psychic").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterPsychic}  Pokémon tipo Psíquico </p3></div>`;
+typePsychic.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}
+
+
+
+//Boton tipo Hierba
+document.getElementById("grass").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGrass}  Pokémon tipo Hierba </p3></div>`;
+typeGrass.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}
+
+//Boton tipo Poison
+document.getElementById("poison").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterPoison}  Pokémon tipo Veneno </p3></div>`;
+typePoison.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}
+
+//Boton tipo Water
+document.getElementById("water").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterWater}  Pokémon tipo Agua </p3></div>`;
+typeWater.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}
+
+//Boton tipo Ground
+document.getElementById("ground").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGround}  Pokémon tipo Tierra </p3></div>`;
+typeGround.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}
+//Boton tipo Rock
+document.getElementById("rock").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterRock}  Pokémon tipo Roca </p3></div>`;
+typeRock.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemones: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}  
+
+//Boton tipo Electric
+document.getElementById("electric").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterElectric}  Pokémon tipo Eléctrico </p3></div>`;
+typeElectric.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemones: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}    
+
+//Boton tipo Bug
+document.getElementById("bug").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterBug}  Pokémon tipo Insecto </p3></div>`;
+typeBug.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemones: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}    
+
+//Boton tipo Normal
+document.getElementById("normal").onclick = () => {
+document.getElementById("root").innerHTML = "";document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterNormal}  Pokémon tipo Normal </p3></div>`;
+typeNormal.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemones: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}  
+  
+//Boton tipo Fighting
+document.getElementById("fighting").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFighting}  Pokémon tipo Lucha </p3></div>`;
+typeFighting.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemones: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}    
+
+//Boton tipo Fairy
+document.getElementById("fairy").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFairy}  Pokémon tipo Hada </p3></div>`;
+typeFairy.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemones: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}    
+//Boton tipo Dark
+document.getElementById("dark").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterDark}  Pokémon tipo Oscuridad </p3></div>`;
+typeDark.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemones: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}    
+//Boton tipo Ghost
+document.getElementById("ghost").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGhost}  Pokémon tipo Fantasma </p3></div>`;
+typeGhost.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemones: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}  
+
+//Boton tipo Steel
+document.getElementById("steel").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterSteel}  Pokémon tipo Acero </p3></div>`;
+typeSteel.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemones: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}  
+//Boton tipo Dragon
+document.getElementById("dragon").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterDragon}  Pokémon tipo Dragón </p3></div>`;
+typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p>Num: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pokemones: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+`);
+}  
 /*
 dataPokemon.forEach(function(element){
   console.log(element);
