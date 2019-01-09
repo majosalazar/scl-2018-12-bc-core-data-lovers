@@ -9,7 +9,7 @@ window.onload = (() => {
     sectionTypes.style.display = 'block';
     root.style.display = 'block';
     sectionStatistcs.style.display = 'block';
-  }, 4000);  
+  }, 2000);  
 });
 
 //muestra todos los pokemones en cartas individuales en la pagina inicial
@@ -21,7 +21,7 @@ document.getElementById('listPokemon').innerHTML += `
     <div class="card-body">
       <p>${num}</p>
       <p>${name}</p>
-      <button class="btn" id="${id}"><i class="fas fa-plus"></i></button>
+      <button class="btn btn-more" id="${id}"><i class="fas fa-plus"></i></button>
     </div>
   </div>
 </div>
@@ -86,7 +86,6 @@ dataPokemon.forEach((element) => {
 
 
 //Filtrar por tipo de Pokemon
-
 //Boton tipo Fire
 document.getElementById("fire").onclick = () => {
 document.getElementById("root").innerHTML = "";
