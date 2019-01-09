@@ -91,6 +91,14 @@ background: #7860E0;
   display: none;
 }
 
+.splashSection {
+  background-image: url(img/fondo-kanto.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+}
+
 .logo {
   text-align: center;
   width: 60%;
@@ -110,7 +118,3 @@ background: #7860E0;
   100% { transform: rotate(360deg); }
 }
 
-.splash {
-  background-image: url(img/fondo.png)
-  
-}
