@@ -2,80 +2,80 @@ const dataPokemon = POKEMON.pokemon;
 
 //Clasifico por tipo
 
-let i=0;
-let grass = [];
-const typeGrass = dataPokemon.filter((types) => types.type[i] === "Grass")
-const prueba = typeGrass.forEach((element) => {
-  grass.push(element.name, element.img)
-});
+//Filtrar tipos fuego
+const typeFire = dataPokemon.filter((types) => {return types.type.indexOf ("Fire") >=0});
+const counterFire=typeFire.length;
 
-//.map((types => types.img + types.name));
-//console.log(grass);
+//Filtrar tipos Hielo
+const typeIce = dataPokemon.filter((types) =>{return types.type.indexOf("Ice") >=0});
+const counterIce=typeIce.length;
 
-const ent = typeGrass.forEach((element) => {
-  //console.log(Object.entries(element))
-});
+//Filtrar tipos Flying
+const typeFlying = dataPokemon.filter((types) => {return types.type.indexOf("Flying") >=0});
+const counterFlying=typeFlying.length;
 
+//Filter Psychic
+const typePsychic = dataPokemon.filter((types) => {return types.type.indexOf("Psychic") >=0});
+const counterPsychic=typePsychic.length;
 
-//.map((types)=>{return types.name;}); 
-//.map((types)=>{return types.name && types.img;}); 
-//window.typeGrass = typeGrass;
+//Filter Grass
+const typeGrass = dataPokemon.filter((types) => {return types.type.indexOf("Grass") >=0});
+const counterGrass=typeGrass.length;
 
+//Filter Poison
+const typePoison = dataPokemon.filter((types) => {return types.type.indexOf("Poison") >=0});
+const counterPoison=typePoison.length;
 
+//Filter Water
+const typeWater = dataPokemon.filter((types) => {return types.type.indexOf("Water") >=0});
+const counterWater=typeWater.length;
 
-const typePoison = dataPokemon.filter((types) => types.type[i] === "Poison")
-.map((types)=>{return types.img;});
+//Filter Ground
+const typeGround = dataPokemon.filter((types) => {return types.type.indexOf("Ground") >=0});
+const counterGround=typeGround.length;
 
-const typeFire = dataPokemon.filter((types) => types.type[i]==="Fire")
-.map((types)=>{return types.img;});
+//Filter Rock
+const typeRock = dataPokemon.filter((types) => {return types.type.indexOf("Rock") >=0});
+const counterRock=typeRock.length;
 
-const typeIce = dataPokemon.filter((types) => types.type[i]==="Ice")
-.map((types)=>{return types.img;});
+//Filter Electric
+const typeElectric = dataPokemon.filter((types) => {return types.type.indexOf("Electric") >=0});
+const counterElectric=typeElectric.length;
 
-const typeFlyin = dataPokemon.filter((types) => types.type[i]==="Flying")
-.map((types)=>{return types.img;});
+//Filter Bug
+const typeBug = dataPokemon.filter((types) => {return types.type.indexOf("Bug") >=0});
+const counterBug=typeBug.length;
 
-const typePsychic = dataPokemon.filter((types) => types.type[i]==="Psychic")
-.map((types)=>{return types.img;});
+//Filter Normal
+const typeNormal = dataPokemon.filter((types) => {return types.type.indexOf("Normal") >=0});
+const counterNormal=typeNormal.length;
 
-const typeWater= dataPokemon.filter((types) => types.type[i]==="Water")
-.map((types)=>{return types.img;});
+//Filter Fighting
+const typeFighting = dataPokemon.filter((types) => {return types.type.indexOf("Fighting") >=0});
+const counterFighting=typeFighting.length;
 
-const typeGround = dataPokemon.filter((types) => types.type[i]==="Ground")
-.map((types)=>{return types.img;});
+//Filter Fairy
+const typeFairy = dataPokemon.filter((types) => {return types.type.indexOf("Fairy") >=0});
+const counterFairy=typeFairy.length;
 
-const typeRock = dataPokemon.filter((types) => types.type[i]==="Rock")
-.map((types)=>{return types.img;});
+//Filter Dark
+const typeDark = dataPokemon.filter((types) => {return types.type.indexOf("Dark") >=0});
+const counterDark=typeDark.length;
 
-const typeElectric= dataPokemon.filter((types) => types.type[i]==="Electric")
-.map((types)=>{return types.img;});
+//Filter Ghost
+const typeGhost = dataPokemon.filter((types) => {return types.type.indexOf("Ghost") >=0});
+const counterGhost=typeGhost.length;
 
-const typeBug = dataPokemon.filter((types) => types.type[i]==="Bug")
-.map((types)=>{return types.img;});
+//Filter Steel
+const typeSteel = dataPokemon.filter((types) => {return types.type.indexOf("Steel") >=0});
+const counterSteel=typeSteel.length;
 
-const typeNormal = dataPokemon.filter((types) => types.type[i]==="Normal")
-.map((types)=>{return types.img;});
-
-const typeFighting = dataPokemon.filter((types) => types.type[i]==="Fighting")
-.map((types)=>{return types.img;});
-
-const typeFairy = dataPokemon.filter((types) => types.type[i]==="Fairy")
-.map((types)=>{return types.img;});
-
-const typeGhost= dataPokemon.filter((types) => types.type[i]==="Ghost")
-.map((types)=>{return types.img;});
-
-const typeDark = dataPokemon.filter((types) => types.type[i]==="Dark")
-.map((types)=>{return types.img;});
-
-const typeSteel = dataPokemon.filter((types) => types.type[i]==="Steel")
-.map((types)=>{return types.img;});
-
-const typeDragon= dataPokemon.filter((types) => types.type[i]==="Dragon")
-.map((types)=>{return types.img;});
+//Filter Dragon
+const typeDragon = dataPokemon.filter((types) => {return types.type.indexOf("Dragon") >=0});
+const counterDragon=typeDragon.length;
 
 window.typesPokemon;
-
+window.dataPokemon;
 
 /*
 window.data = {
@@ -94,4 +94,3 @@ window.data = {
   }
 }
 */
-
