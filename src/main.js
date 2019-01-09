@@ -1,7 +1,20 @@
+window.onload = (() => {
+  //funcion del splash
+   setTimeout(() => {
+    //splash.style.display = 'none';
+    sectionNav.style.display = 'block';
+    sectionSelect.style.display = 'block';
+    sectionList.style.display = 'block';
+    sectionMain.style.display = 'block';
+    sectionTypes.style.display = 'block';
+    root.style.display = 'block';
+  }, 4000);  
+});
+
 //muestra todos los pokemones en cartas individuales en la pagina inicial
-dataPokemon.map(({num,name,img,id}) =>
-  document.getElementById('listPokemon').innerHTML += `
-<div class="col-4">
+dataPokemon.map(({num, name, img, id}) => 
+document.getElementById('listPokemon').innerHTML += `
+<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
   <div class="card w-100" style="width: 15rem;">
     <img class="card-img-top" src=${img}>
     <div class="card-body">
@@ -15,29 +28,60 @@ dataPokemon.map(({num,name,img,id}) =>
 );
 
 //entrar a carta principal de un pokemon
-dataPokemon.map(({id,num,name,img,type, height,weight,weaknesses,prev_evolution,next_evolution,spawn_chance}) =>
-  document.getElementById(`${id}`).onclick = () => {
+dataPokemon.forEach((element) => {
+  document.getElementById(`${element.id}`).onclick = () => {
+    //permite mostrar los tipos de pokemon de forma invidividual
+    const typesPokemon = element.type
+    let typesPrint = '';
+    typesPokemon.forEach((type) => {
+      typesPrint += `<button class="btn ${type.toLowerCase()}">${type}</button>`
+    });
+    //permite mostrar las debilidades de un pokemon de forma invidividual
+    const weaknessesPokemon = element.weaknesses
+    let weaknessesPrint = '';
+    weaknessesPokemon.forEach((weaknesses) => {
+      weaknessesPrint += `<button class="btn ${weaknesses.toLowerCase()}">${weaknesses}</button>`
+    });
+
+    /*
+    //permite mostrar las pre evoluciones de un pokemon
+    const prev_evolutionPokemon = element.prev_evolution
+    let prev_evolutionPrint = '';   
+    prev_evolutionPokemon.map(({num, name}) => {
+      prev_evolutionPrint += `<p>${num}</p>
+      <span>${name}</span>`
+    
+    });
+    
+    //permite mostrar las siguientes evoluciones de un pokemon
+    const next_evolutionPokemon = element.next_evolution
+    let next_evolutionPrint = '';   
+    next_evolutionPokemon.map(({num, name}) => {
+      next_evolutionPrint += `<p>${num}</p>
+      <p>${name}</p>`
+    });
+    */
+    
+
+    //imprime en la pantalla la tarjeta de un pokemon
     document.getElementById('main').innerHTML += `
-  <div class="card w-100" style="width: 15rem;">
-    <img class="card-img-top" src=${img}>
-    <div class="card-body">
-      <p>${num}</p>
-      <p>${name}</p>
-      <button class="${type[0]}">${type[0]}</button>
-      <button class="${type[1]}">${type[1]}</button>
-      <button class="${type[2]}">${type[2]}</button>
-      <button class="${type[3]}">typesPokemon</button>
-      <p>${type[0]}</p>
-      <p>${height}</p>
-      <p>${weight}</p>
-      <p>${weaknesses}</p>
-      <p>${prev_evolution}</p>
-      <p>${next_evolution}</p>
-      <p>${spawn_chance}</p>
+    <div class="card" style="width: 15rem;">
+      <div class="w-100">
+        <img class="card-img-top" src=${element.img}>
+      </div>
+      <div class="card-body">
+        <p>${element.num}</p>
+        <p>${element.name}</p>
+        <span>Tipo: ${typesPrint}</span>
+        <p>Altura: ${element.height}</p>
+        <p>Peso: ${element.weight}</p>
+        <span>${weaknessesPrint}</span>
+        <p>Rango de aparición: ${element.spawn_chance}</p>
+      </div>
     </div>
-  </div>
-  `
-  });
+    `
+  };
+});
 
 
 //Filtrar por tipo de Pokemon
@@ -133,8 +177,6 @@ typePsychic.map(({num,name,img,height,weight,type,weaknesses}) => document.getEl
 </div>
 `);
 }
-
-
 
 //Boton tipo Hierba
 document.getElementById("grass").onclick = () => {
@@ -452,11 +494,7 @@ typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
 </div>
 `);
 }  
-/*
-dataPokemon.forEach(function(element){
-  console.log(element);
-})
-*/
+
 
 
 //filtrar por nombre, busca lo que se le ingresa en el input y lo compara con la info en dataPokemon
