@@ -1,7 +1,7 @@
 window.onload = (() => {
   //funcion del splash
    setTimeout(() => {
-    splash.style.display = 'none';
+    //splash.style.display = 'none';
     sectionNav.style.display = 'block';
     sectionSelect.style.display = 'block';
     sectionList.style.display = 'block';
@@ -14,7 +14,7 @@ window.onload = (() => {
 //muestra todos los pokemones en cartas individuales en la pagina inicial
 dataPokemon.map(({num, name, img, id}) => 
 document.getElementById('listPokemon').innerHTML += `
-<div class="col-4">
+<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
   <div class="card w-100" style="width: 15rem;">
     <img class="card-img-top" src=${img}>
     <div class="card-body">
