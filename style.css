@@ -102,12 +102,13 @@
 .result{
 	text-align: center;
 	font-size: 100%;
-	display: flex;
+	/*display: flex;*/
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	vertical-align: text-top;
+	display:block;
  }
 
 .wrap{
@@ -196,5 +197,7 @@
  }
  
  p3{
+	 display: block;
+	 margin-bottom: 40px;
 	 display: block;
  }
