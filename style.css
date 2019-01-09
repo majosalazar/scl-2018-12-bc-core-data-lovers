@@ -219,7 +219,9 @@
 #root {
   display: none;
 }
-
+#sectionStatistcs {
+  display: none;
+}
 
 /* estilos loader */
 .splashSection {

@@ -8,6 +8,7 @@ window.onload = (() => {
     sectionMain.style.display = 'block';
     sectionTypes.style.display = 'block';
     root.style.display = 'block';
+    sectionStatistcs.style.display = 'block';
   }, 4000);  
 });
 
