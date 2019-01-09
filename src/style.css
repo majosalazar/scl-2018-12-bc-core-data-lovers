@@ -93,23 +93,40 @@ background: #7860E0;
 
 .splashSection {
   background-image: url(img/fondo-kanto.jpg);
-  background-size: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  /*
   background-attachment: fixed;
   background-position: center top;
-  background-size: cover;
+  height: auto;
+  width: auto;
+  */
 }
 
 .logo {
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10m;
+  display: table-cell;
+  vertical-align: middle;
   width: 60%;
 }
 
+@media(min-width: 200px) and (max-width: 600px){
+  .logo{
+    padding-top: 60%;
+  }
+}
+/*
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid#EF474B; /* Blue */
+  display:block;
+  margin:auto;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid#EF474B; 
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   animation: spin 2s linear infinite;
 }
 
@@ -118,3 +135,4 @@ background: #7860E0;
   100% { transform: rotate(360deg); }
 }
 
+*/
