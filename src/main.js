@@ -35,6 +35,30 @@ document.getElementById('btn-statistics').onclick = () => {
   root.style.display = 'none';
   sectionStatistcs.style.display = 'block';
 }
+
+//reverse
+document.getElementById('numReverse').onselect = () => {
+  console.log('hola');
+  
+  document.getElementById('listPokemon').innerHTML = '';
+  const prueba = dataPokemon.map.reverse(({num, name, img, id}) => 
+  document.getElementById('listPokemon').innerHTML += `
+  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
+    <div class="card w-100" style="width: 15rem;">
+      <img class="card-img-top imgPoke" src=${img}>
+      <div class="card-body">
+        <p>${num}</p>
+        <p>${name}</p>
+        <button class="btn btn-more" id="${id}"><i class="fas fa-plus"></i></button>
+      </div>
+    </div>
+  </div>
+  `
+  );
+  console.log(prueba);
+  
+}
+
 //muestra todos los pokemones en cartas individuales en la pagina inicial
 dataPokemon.map(({num, name, img, id}) => 
 document.getElementById('listPokemon').innerHTML += `

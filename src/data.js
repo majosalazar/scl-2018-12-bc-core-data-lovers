@@ -77,7 +77,7 @@ const counterDragon=typeDragon.length;
 window.typesPokemon;
 window.dataPokemon;
 
-/*
+
 window.data = {
   filterData: (dataPokemon, searchPokemon) => {
     const filterPokemonName = dataPokemon.filter(dataPokemon => (dataPokemon.name === searchPokemon));
@@ -94,7 +94,7 @@ window.data = {
 
   }
 }
-*/
+
 // Graficos
 google.charts.load("current", {packages:["corechart"]});
 google.charts.setOnLoadCallback(drawChart);
