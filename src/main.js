@@ -544,9 +544,47 @@ typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
 
 //filtrar por nombre, busca lo que se le ingresa en el input y lo compara con la info en dataPokemon
 document.getElementById('btnSearch').onclick = () => {
-  document.getElementById('listPokemon').innerHTML = '';
-  let searchPokemon = document.getElementById('searchForName').value;
-  const filterPokemonName = dataPokemon.filter(dataPokemon => (dataPokemon.name === searchPokemon));
-  document.getElementById('listPokemon').innerHTML = filterPokemonName;
-  console.log(filterPokemonName);
+  let condition = document.getElementById('searchForName').value;
+  document.getElementById("root").innerHTML = "";
+  dataPokemon.filter(element => {
+    if (element.name === condition) {
+
+    }
+     
+  })
+  //filtrado
+  filtered.forEach(element => {
+    /*
+    //permite mostrar los tipos de pokemon de forma invidividual
+    const typesPokemon = element.type
+    let typesPrint = '';
+    typesPokemon.forEach((type) => {
+      typesPrint += `<button class="btn ${type.toLowerCase()}">${type}</button>`
+    });
+    //permite mostrar las debilidades de un pokemon de forma invidividual
+    const weaknessesPokemon = element.weaknesses
+    let weaknessesPrint = '';
+    weaknessesPokemon.forEach((weaknesses) => {
+      weaknessesPrint += `<button class="btn ${weaknesses.toLowerCase()}">${weaknesses}</button>`
+    });
+*/
+
+    //imprime en la pantalla la tarjeta de un pokemon
+    document.getElementById('root').innerHTML += `
+      <div class="card" style="width: 15rem;">
+        <div class="w-100">
+          <img class="card-img-top" src=${element.img}>
+        </div>
+        <div class="card-body">
+          <p>${element.num}</p>
+          <p>${element.name}</p>
+          <p>Altura: ${element.height}</p>
+          <p>Peso: ${element.weight}</p>
+          <p>Rango de aparición: ${element.spawn_chance}</p>
+        </div>
+      </div>
+      ` 
+  });
 };
+
+
