@@ -13,8 +13,20 @@ window.onload = (() => {
   }, 500);  
 });
 
+//btn para volver a pantalla inicio
+start = () => {
+  splash.style.display = 'none';
+    sectionNav.style.display = 'block';
+    sectionSelect.style.display = 'block';
+    sectionList.style.display = 'block';
+    sectionMain.style.display = 'block';
+    sectionTypes.style.display = 'block';
+    root.style.display = 'block';
+    sectionStatistcs.style.display = 'block';
+}
+
 //boton ver tipo de pokemones
-document.getElementById('btn-type').onclick = () => {
+btnType = () => {
   splash.style.display = 'none';
   sectionNav.style.display = 'block';
   sectionSelect.style.display = 'block';
@@ -23,10 +35,11 @@ document.getElementById('btn-type').onclick = () => {
   sectionTypes.style.display = 'block';
   root.style.display = 'block';
   sectionStatistcs.style.display = 'none';
-}
+};
+
 
 //boton ver estadisticas
-document.getElementById('btn-statistics').onclick = () => {
+btnStatistics = () => {
   splash.style.display = 'none';
   sectionNav.style.display = 'block';
   sectionSelect.style.display = 'block';
@@ -35,7 +48,9 @@ document.getElementById('btn-statistics').onclick = () => {
   sectionTypes.style.display = 'none';
   root.style.display = 'none';
   sectionStatistcs.style.display = 'block';
-}
+};
+
+
 
 //reverse / muestra los pokemones del 151 al 1
 document.getElementById('numReverse').onclick = () => {
@@ -478,7 +493,7 @@ document.getElementById("ghost").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGhost}  Pokémon tipo Fantasma </p3></div>`;
 typeGhost.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
@@ -492,8 +507,9 @@ typeGhost.map(({num,name,img,height,weight,type,weaknesses}) => document.getElem
           </div>
     </div>
   </div>
-</div>
-`);
+</div>`
+
+);
 }  
 
 //Boton tipo Steel
@@ -568,7 +584,7 @@ typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
     weaknessesPokemon.forEach((weaknesses) => {
       weaknessesPrint += `<button class="btn ${weaknesses.toLowerCase()}">${weaknesses}</button>`
     });
-*/
+
 
     //imprime en la pantalla la tarjeta de un pokemon
     document.getElementById('root').innerHTML += `
@@ -585,6 +601,7 @@ typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
         </div>
       </div>
   `
+  */
 
   
     
