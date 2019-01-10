@@ -13,6 +13,18 @@ window.onload = (() => {
   }, 500);  
 });
 
+//btn para volver a pantalla inicio
+start = () => {
+  splash.style.display = 'none';
+    sectionNav.style.display = 'block';
+    sectionSelect.style.display = 'block';
+    sectionList.style.display = 'block';
+    sectionMain.style.display = 'block';
+    sectionTypes.style.display = 'block';
+    root.style.display = 'block';
+    sectionStatistcs.style.display = 'block';
+}
+
 //boton ver tipo de pokemones
 btnType = () => {
   splash.style.display = 'none';
