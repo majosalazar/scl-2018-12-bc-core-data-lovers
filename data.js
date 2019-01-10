@@ -228,6 +228,53 @@ var chart = new google.visualization.PieChart(document.getElementById('donutchar
 chart.draw(data, options);
 }
 
+google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Tipo', 'Probabilidad de Encontrar Pókemon por Tipo'],
+          ['Fuego',     counterFire],
+          ['Hielo',      counterIce],
+          ['Volador',  counterFlying],
+          ['Psíquico', counterPsychic],
+          ['Hierba ',    counterGrass],
+          ['Veneno ',    counterPoison],
+          ['Agua ',    counterWater],
+          ['Tierra ',    counterGround],
+          ['Roca ',    counterRock],
+          ['Eléctrico ',    counterElectric],
+          ['Insecto ',    counterBug],
+          ['Normal ',    counterNormal],
+          ['Lucha ',    counterFighting],
+          ['Hada ',    counterFairy],
+          ['Oscuridad ',    counterDark],
+          ['Fantasma ',    counterGhost],
+          ['Acero ',    counterSteel],
+          ['Dragon ',    counterDragon]
+]);
+
+        var options = {
+          width: 800,
+          legend: { position: 'none' },
+          chart: {
+            title: 'Promedio de Aparición por Tipo',
+            subtitle: 'Promedio de Aparición por Tipo de Pókemon' },
+          axes: {
+            x: {
+              0: { side: 'top', label: 'White to move'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        // Convert the Classic options to Material options.
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      };
+
+
+
 /*
 //filtrar por nombre, busca lo que se le ingresa en el input y lo compara con la info en dataPokemon
 const filterName = (dataPokemon, condition) => {
