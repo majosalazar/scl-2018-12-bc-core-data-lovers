@@ -107,7 +107,6 @@ var data = google.visualization.arrayToDataTable([
   ['Psíquico', counterPsychic],
   ['Hierba ',    counterGrass],
   ['Veneno ',    counterPoison],
-  ['Hierba ',    counterGrass],
   ['Agua ',    counterWater],
   ['Tierra ',    counterGround],
   ['Roca ',    counterRock],
@@ -115,17 +114,16 @@ var data = google.visualization.arrayToDataTable([
   ['Insecto ',    counterBug],
   ['Normal ',    counterNormal],
   ['Lucha ',    counterFighting],
-  ['Hada ',    counterFire],
+  ['Hada ',    counterFairy],
   ['Oscuridad ',    counterDark],
   ['Fantasma ',    counterGhost],
   ['Acero ',    counterSteel],
   ['Dragon ',    counterDragon]
-  
 ]);
 
 var options = {
-  title: 'My Daily Activities',
-  pieHole: 0.4,
+  title: 'Cantidad de Pókemon por Tipo',
+  pieHole: 0.5,
   width: 1000,
   height: 800,
 };
