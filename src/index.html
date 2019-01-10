@@ -23,66 +23,39 @@
   </div>
 
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-poke">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
-    <a class="navbar-brand" href="#">
-      <img src="img/logo pokemon.png" alt="logo" class="logoNav">
-    </a>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-
-  <nav id="sectionNav" class="navbar navbar-expand-lg navbar-poke">
-    <img src="img/logo pokemon.png" alt="logo" class="logoNav">
-    <!-- 
-      <a class="navbar-brand text-white d-inline-flex" href="#">
-        <p>Strategist Pokémon</p>
+  <section  id="sectionNav">
+    <nav class="navbar navbar-expand-lg navbar-poke">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="img/logo pokemon.png" alt="logo" class="logoNav">
       </a>
-
-     -->
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#exampleModalCenter1">Ver por tipo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#exampleModalCenter2">Ver
-            estadísticas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#exampleModalCenter3">¿Cómo
-            funciona?</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" id="searchForName" type="search" placeholder="Buscar por nombre">
-        <button class="btn btn-more text-white" id="btnSearch" type="submit"><i class="fas fa-search"></i></button>
-      </form>
-    </div>
-
-  </nav>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#exampleModalCenter1">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#exampleModalCenter1">Ver por tipo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#exampleModalCenter2">Ver
+              estadísticas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#exampleModalCenter3">¿Cómo
+              funciona?</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input id="searchForName" class="form-control mr-sm-2" type="search" placeholder="Buscar por nombre">
+          <button id="btnSearch" class="btn btn-outline-success text-white my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+  </section>
 
   <!-- seccion botones y selector de orden / pagina inicial -->
   <section id="sectionSelect" class="container">
@@ -97,13 +70,12 @@
           <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Ordenar por</label>
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
+          <select class="custom-select" id="numReverse">
             <option selected>1 - 151</option>
-            <option value="1" id="">151 -1</option>
+            <option value="1">151 -1</option>
             <option value="2">A - Z</option>
             <option value="3">Z - A</option>
           </select>
-          <button id="numReverse">FLECHA</button>
         </div>
       </div>
     </div>
