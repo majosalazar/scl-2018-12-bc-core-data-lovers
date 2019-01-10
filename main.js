@@ -53,7 +53,8 @@ btnStatistics = () => {
 
 
 //reverse / muestra los pokemones del 151 al 1
-document.getElementById('numReverse').onclick = () => {
+const select151 = document.getElementById('numReverse');
+select151.addEventListener('change', () => {
   document.getElementById('listPokemon').innerHTML = '';
   const dataReverse = dataPokemon.reverse()
   dataReverse.map(({num, name, img, id}) => 
@@ -70,7 +71,10 @@ document.getElementById('numReverse').onclick = () => {
   </div>
   `
   );
-}
+
+
+})
+//document.getElementById('numReverse').onchange = () => {}
 
 //muestra todos los pokemones en cartas individuales en la pagina inicial
 
