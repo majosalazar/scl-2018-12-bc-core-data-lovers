@@ -298,12 +298,16 @@
 }
 
 .btn-type {
-  margin: 0.5em;
-  padding: 20px;
+  padding: 5%;
   color: #ffffff;
   border-radius: 15px;
+  width: 100%;
 }
 
 .section-select {
   margin-top: 2em;
+}
+
+.contenedor-btns {
+  padding: 1%;
 }
