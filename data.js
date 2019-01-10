@@ -1,22 +1,43 @@
 const dataPokemon = POKEMON.pokemon;
 
-//Clasifico por tipo
+//Clasifico por tipo y  Calculo Promedio "Oportunidad de captura de un Pókemon por tipo"
+// con los average hago una grafica y muestro esta estadistica 
 
 //Filtrar tipos fuego
 const typeFire = dataPokemon.filter((types) => {return types.type.indexOf ("Fire") >=0});
 const counterFire=typeFire.length;
+const totalFire = typeFire.reduce(function(sumaFire, spawn){
+  return sumaFire + spawn.spawn_chance;
+  }, 0);
+  const averageFire=(totalFire/counterFire);
+
 
 //Filtrar tipos Hielo
 const typeIce = dataPokemon.filter((types) =>{return types.type.indexOf("Ice") >=0});
 const counterIce=typeIce.length;
+const totalIce = typeIce.reduce(function(sumaIce, spawn){
+  return sumaIce + spawn.spawn_chance;
+  }, 0);
+  const averageIce=(totalIce/counterIce);
+
 
 //Filtrar tipos Flying
 const typeFlying = dataPokemon.filter((types) => {return types.type.indexOf("Flying") >=0});
 const counterFlying=typeFlying.length;
+const totalFlying = typeFlying.reduce(function(sumaFlying, spawn){
+  return sumaFlying + spawn.spawn_chance;
+  }, 0);
+  const averageFlying=(totalFlying/counterFlying);
+  console.log(averageFlying);
+
 
 //Filter Psychic
 const typePsychic = dataPokemon.filter((types) => {return types.type.indexOf("Psychic") >=0});
 const counterPsychic=typePsychic.length;
+const totalPsychic= typePsychic.reduce(function(sumaPsychic, spawn){
+  return sumaPsychic + spawn.spawn_chance;
+  }, 0);
+  const averagePsychic=(totalPsychic/counterPsychic);
 
 //Filter Grass
 const typeGrass = dataPokemon.filter((types) => {return types.type.indexOf("Grass") >=0});
@@ -65,6 +86,12 @@ const counterDark=typeDark.length;
 //Filter Ghost
 const typeGhost = dataPokemon.filter((types) => {return types.type.indexOf("Ghost") >=0});
 const counterGhost=typeGhost.length;
+ const totalGhost = dataPokemon.reduce(function(sumaGhost, spawn){
+  return sumaGhost + spawn.spawn_chance;
+  }, 0);
+  const averageGhost=(totalGhost/counterGhost);
+
+
 
 //Filter Steel
 const typeSteel = dataPokemon.filter((types) => {return types.type.indexOf("Steel") >=0});
@@ -73,6 +100,12 @@ const counterSteel=typeSteel.length;
 //Filter Dragon
 const typeDragon = dataPokemon.filter((types) => {return types.type.indexOf("Dragon") >=0});
 const counterDragon=typeDragon.length;
+const totalDragon = typeDragon.reduce(function(sumaDragon, spawn){
+  return sumaDragon + spawn.spawn_chance;
+  }, 0);
+  const averageDragon=(totalDragon/counterDragon);
+  console.log(averageDragon);
+
 
 window.typesPokemon;
 window.dataPokemon;
