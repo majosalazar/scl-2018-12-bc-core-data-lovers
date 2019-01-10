@@ -1,5 +1,6 @@
 window.onload = (() => {
   //funcion del splash
+  
    setTimeout(() => {
     splash.style.display = 'none';
     sectionNav.style.display = 'block';
@@ -57,6 +58,7 @@ document.getElementById('numReverse').onclick = () => {
 }
 
 //muestra todos los pokemones en cartas individuales en la pagina inicial
+
 dataPokemon.map(({num, name, img, id}) => 
 document.getElementById('listPokemon').innerHTML += `
 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
@@ -543,17 +545,17 @@ typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
 
 
 //filtrar por nombre, busca lo que se le ingresa en el input y lo compara con la info en dataPokemon
-document.getElementById('btnSearch').onclick = () => {
-  let condition = document.getElementById('searchForName').value;
-  document.getElementById("root").innerHTML = "";
-  dataPokemon.filter(element => {
-    if (element.name === condition) {
+//document.getElementById('btnSearch').onclick = () => {
+ // let condition = document.getElementById('searchForName').value;
+  //document.getElementById("root").innerHTML = "";
+  //dataPokemon.filter(element => {
+    //if (element.name === condition) {
 
-    }
+    //}
      
-  })
+ // })
   //filtrado
-  filtered.forEach(element => {
+  //filtered.forEach(element => {
     /*
     //permite mostrar los tipos de pokemon de forma invidividual
     const typesPokemon = element.type
@@ -583,8 +585,7 @@ document.getElementById('btnSearch').onclick = () => {
           <p>Rango de aparición: ${element.spawn_chance}</p>
         </div>
       </div>
-      ` 
-  });
-};
+  `
 
-
+  
+    
