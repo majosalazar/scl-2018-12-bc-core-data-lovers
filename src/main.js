@@ -478,7 +478,7 @@ document.getElementById("ghost").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGhost}  Pokémon tipo Fantasma </p3></div>`;
 typeGhost.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
@@ -492,8 +492,9 @@ typeGhost.map(({num,name,img,height,weight,type,weaknesses}) => document.getElem
           </div>
     </div>
   </div>
-</div>
-`);
+</div>`
+
+);
 }  
 
 //Boton tipo Steel
@@ -569,7 +570,7 @@ typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
     weaknessesPokemon.forEach((weaknesses) => {
       weaknessesPrint += `<button class="btn ${weaknesses.toLowerCase()}">${weaknesses}</button>`
     });
-*/
+
 
     //imprime en la pantalla la tarjeta de un pokemon
     document.getElementById('root').innerHTML += `
@@ -586,6 +587,7 @@ typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
         </div>
       </div>
   `
+  */
 
   
     
