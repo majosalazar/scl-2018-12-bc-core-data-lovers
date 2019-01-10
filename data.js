@@ -133,3 +133,13 @@ var options = {
 var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
 chart.draw(data, options);
 }
+
+/*
+//filtrar por nombre, busca lo que se le ingresa en el input y lo compara con la info en dataPokemon
+const filterName = (dataPokemon, condition) => {
+  const filteredName = dataPokemon.filter(element => {
+    return element.name === condition
+  })
+  return filteredName;
+};
+*/
