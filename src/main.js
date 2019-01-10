@@ -14,7 +14,7 @@ window.onload = (() => {
 });
 
 //boton ver tipo de pokemones
-document.getElementById('btn-type').onclick = () => {
+btnType = () => {
   splash.style.display = 'none';
   sectionNav.style.display = 'block';
   sectionSelect.style.display = 'block';
@@ -23,10 +23,11 @@ document.getElementById('btn-type').onclick = () => {
   sectionTypes.style.display = 'block';
   root.style.display = 'block';
   sectionStatistcs.style.display = 'none';
-}
+};
+
 
 //boton ver estadisticas
-document.getElementById('btn-statistics').onclick = () => {
+btnStatistics = () => {
   splash.style.display = 'none';
   sectionNav.style.display = 'block';
   sectionSelect.style.display = 'block';
@@ -35,7 +36,9 @@ document.getElementById('btn-statistics').onclick = () => {
   sectionTypes.style.display = 'none';
   root.style.display = 'none';
   sectionStatistcs.style.display = 'block';
-}
+};
+
+
 
 //reverse / muestra los pokemones del 151 al 1
 document.getElementById('numReverse').onclick = () => {

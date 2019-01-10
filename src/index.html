@@ -35,13 +35,13 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#exampleModalCenter1">Inicio</a>
+            <a class="nav-link text-white" href="#" onclick="start()" data-toggle="modal" data-target="#exampleModalCenter1">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#exampleModalCenter1">Ver por tipo</a>
+            <a class="nav-link text-white" href="#" onclick="btnType()" data-toggle="modal" data-target="#exampleModalCenter1">Ver por tipo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#exampleModalCenter2">Ver
+            <a class="nav-link text-white" href="#" onclick="btnStatistics()" data-toggle="modal" data-target="#exampleModalCenter2">Ver
               estadísticas</a>
           </li>
           <li class="nav-item">
@@ -61,10 +61,6 @@
   <section id="sectionSelect" class="container">
     <div class="row">
       <div class="col">
-        <!-- botones pagina inicial -->
-        <button id="btn-type" class="btn btns btn-lg text-white">Ver por Tipo</button>
-        <button id="btn-statistics" class="btn btns btn-lg text-white">Ver Estadísticas</button>
-
         <!-- selector para ordenar -->
         <div class="input-group mb-3">
           <div class="input-group-prepend">
