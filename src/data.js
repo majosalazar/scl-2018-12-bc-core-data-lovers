@@ -221,36 +221,37 @@ google.charts.load('current', {'packages':['bar']});
 
       function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
-          ['Tipo', 'Probabilidad de Encontrar %'],
-          ['Pókemon Fuego',     averageFire],
-          ['Hielo',      averageIce],
-          ['Volador',  averageFlying],
-          ['Psíquico', averagePsychic],
-          ['Hierba ',    averageGrass],
-          ['Veneno ',    averagePoison],
-          ['Agua ',    averageWater],
-          ['Tierra ',    averageGround],
-          ['Roca ',    averageRock],
-          ['Eléctrico ',    averageElectric],
-          ['Insecto ',    averageBug],
-          ['Normal ',    averageNormal],
-          ['Lucha ',    averageFighting],
-          ['Hada ',    averageFairy],
-          ['Oscuridad ',    averageDark],
-          ['Fantasma ',    averageGhost],
-          ['Acero ',    averageSteel],
-          ['Dragon ',    averageDragon]
+          ['Tipo', 'Probabilidad de Engendro %'],
+          ['Hielo',          averageIce],
+          ['Fuego',         averageFire],
+          ['Volador',     averageFlying],
+          ['Psíquico',   averagePsychic],
+          ['Hierba',       averageGrass],
+          ['Veneno',      averagePoison],
+          ['Agua',         averageWater],
+          ['Tierra',      averageGround],
+          ['Roca',          averageRock],
+          ['Eléctrico', averageElectric],
+          ['Insecto',        averageBug],
+          ['Normal',      averageNormal],
+          ['Lucha',     averageFighting],
+          ['Hada',         averageFairy],
+          ['Oscuridad',     averageDark],
+          ['Fantasma',     averageGhost],
+          ['Acero',        averageSteel],
+          ['Dragon',      averageDragon]
 ]);
 
         var options = {
-          width: 800,
-          legend: { position: 'none' },
+          width: 900,
+          height: 600,
+          legend: { position:'none'},
           chart: {
-            title: 'Promedio de Aparición',
-            subtitle: 'Promedio de Aparición por Tipo de Pókemon %' },
+            title: 'Promedio de Engendro',
+            subtitle: 'Posibilidad de Engendro por Tipo de Pókemon (%)' },
           axes: {
             x: {
-              60: { side: 'top', label: 'White to move'} // Top x-axis.
+              0: { side: 'top', label: 'POKÉMON POR TIPO'} // Top x-axis.
             }
           },
           bar: { groupWidth: "100%" }
@@ -259,7 +260,7 @@ google.charts.load('current', {'packages':['bar']});
         var chart = new google.charts.Bar(document.getElementById('top_x_div'));
         // Convert the Classic options to Material options.
         chart.draw(data, google.charts.Bar.convertOptions(options));
-      };
+      }
 
 
 
