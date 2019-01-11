@@ -221,39 +221,39 @@ google.charts.load('current', {'packages':['bar']});
 
       function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
-          ['Tipo', 'Probabilidad de Encontrar Pókemon por Tipo'],
-          ['Fuego',     counterFire],
-          ['Hielo',      counterIce],
-          ['Volador',  counterFlying],
-          ['Psíquico', counterPsychic],
-          ['Hierba ',    counterGrass],
-          ['Veneno ',    counterPoison],
-          ['Agua ',    counterWater],
-          ['Tierra ',    counterGround],
-          ['Roca ',    counterRock],
-          ['Eléctrico ',    counterElectric],
-          ['Insecto ',    counterBug],
-          ['Normal ',    counterNormal],
-          ['Lucha ',    counterFighting],
-          ['Hada ',    counterFairy],
-          ['Oscuridad ',    counterDark],
-          ['Fantasma ',    counterGhost],
-          ['Acero ',    counterSteel],
-          ['Dragon ',    counterDragon]
+          ['Tipo', 'Probabilidad de Encontrar %'],
+          ['Pókemon Fuego',     averageFire],
+          ['Hielo',      averageIce],
+          ['Volador',  averageFlying],
+          ['Psíquico', averagePsychic],
+          ['Hierba ',    averageGrass],
+          ['Veneno ',    averagePoison],
+          ['Agua ',    averageWater],
+          ['Tierra ',    averageGround],
+          ['Roca ',    averageRock],
+          ['Eléctrico ',    averageElectric],
+          ['Insecto ',    averageBug],
+          ['Normal ',    averageNormal],
+          ['Lucha ',    averageFighting],
+          ['Hada ',    averageFairy],
+          ['Oscuridad ',    averageDark],
+          ['Fantasma ',    averageGhost],
+          ['Acero ',    averageSteel],
+          ['Dragon ',    averageDragon]
 ]);
 
         var options = {
           width: 800,
           legend: { position: 'none' },
           chart: {
-            title: 'Promedio de Aparición por Tipo',
-            subtitle: 'Promedio de Aparición por Tipo de Pókemon' },
+            title: 'Promedio de Aparición',
+            subtitle: 'Promedio de Aparición por Tipo de Pókemon %' },
           axes: {
             x: {
-              0: { side: 'top', label: 'White to move'} // Top x-axis.
+              60: { side: 'top', label: 'White to move'} // Top x-axis.
             }
           },
-          bar: { groupWidth: "90%" }
+          bar: { groupWidth: "100%" }
         };
 
         var chart = new google.charts.Bar(document.getElementById('top_x_div'));
