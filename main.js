@@ -6,10 +6,10 @@ window.onload = (() => {
     sectionNav.style.display = 'block';
     sectionSelect.style.display = 'block';
     sectionList.style.display = 'block';
-    sectionMain.style.display = 'block';
-    sectionTypes.style.display = 'block';
-    root.style.display = 'block';
-    sectionStatistcs.style.display = 'block';
+    sectionMain.style.display = 'none';
+    sectionTypes.style.display = 'none';
+    root.style.display = 'none';
+    sectionStatistcs.style.display = 'none';
   }, 500);  
 });
 
@@ -97,6 +97,15 @@ document.getElementById('listPokemon').innerHTML += `
 //entrar a carta principal de un pokemon
 dataPokemon.forEach((element) => {
   document.getElementById(`${element.id}`).onclick = () => {
+    splash.style.display = 'none';
+    sectionNav.style.display = 'block';
+    sectionSelect.style.display = 'none';
+    sectionList.style.display = 'none';
+    sectionMain.style.display = 'block';
+    sectionTypes.style.display = 'none';
+    root.style.display = 'none';
+    sectionStatistcs.style.display = 'none';
+
     //permite mostrar los tipos de pokemon de forma invidividual
     const typesPokemon = element.type
     let typesPrint = '';
@@ -154,6 +163,14 @@ dataPokemon.forEach((element) => {
 //Filtrar por tipo de Pokemon
 //Boton tipo Fire
 document.getElementById("fire").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFire}  Pokémon tipo Fuego </p3></div>`;
 typeFire.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -178,6 +195,14 @@ typeFire.map(({num,name,img,height,weight,type,weaknesses}) => document.getEleme
 
 //Boton tipo Ice
 document.getElementById("ice").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterIce}  Pokémon tipo Hielo </p3></div>`;
 typeIce.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -201,6 +226,14 @@ typeIce.map(({num,name,img,height,weight,type,weaknesses}) => document.getElemen
 
 //Boton tipo Volador
 document.getElementById("flying").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFlying}  Pokémon tipo Volador </p3></div>`;
 typeFlying.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -225,6 +258,14 @@ typeFlying.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
 
 //Boton tipo Psychic
 document.getElementById("psychic").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterPsychic}  Pokémon tipo Psíquico </p3></div>`;
 typePsychic.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -249,6 +290,14 @@ typePsychic.map(({num,name,img,height,weight,type,weaknesses}) => document.getEl
 
 //Boton tipo Hierba
 document.getElementById("grass").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGrass}  Pokémon tipo Hierba </p3></div>`;
 typeGrass.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -273,6 +322,14 @@ typeGrass.map(({num,name,img,height,weight,type,weaknesses}) => document.getElem
 
 //Boton tipo Poison
 document.getElementById("poison").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterPoison}  Pokémon tipo Veneno </p3></div>`;
 typePoison.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -297,6 +354,14 @@ typePoison.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
 
 //Boton tipo Water
 document.getElementById("water").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterWater}  Pokémon tipo Agua </p3></div>`;
 typeWater.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -321,6 +386,14 @@ typeWater.map(({num,name,img,height,weight,type,weaknesses}) => document.getElem
 
 //Boton tipo Ground
 document.getElementById("ground").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGround}  Pokémon tipo Tierra </p3></div>`;
 typeGround.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -344,6 +417,14 @@ typeGround.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
 }
 //Boton tipo Rock
 document.getElementById("rock").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterRock}  Pokémon tipo Roca </p3></div>`;
 typeRock.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -368,6 +449,14 @@ typeRock.map(({num,name,img,height,weight,type,weaknesses}) => document.getEleme
 
 //Boton tipo Electric
 document.getElementById("electric").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterElectric}  Pokémon tipo Eléctrico </p3></div>`;
 typeElectric.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -392,6 +481,14 @@ typeElectric.map(({num,name,img,height,weight,type,weaknesses}) => document.getE
 
 //Boton tipo Bug
 document.getElementById("bug").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterBug}  Pokémon tipo Insecto </p3></div>`;
 typeBug.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -416,6 +513,14 @@ typeBug.map(({num,name,img,height,weight,type,weaknesses}) => document.getElemen
 
 //Boton tipo Normal
 document.getElementById("normal").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterNormal}  Pokémon tipo Normal </p3></div>`;
 typeNormal.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
 <div class="wrap"> 
@@ -439,6 +544,14 @@ typeNormal.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
   
 //Boton tipo Fighting
 document.getElementById("fighting").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFighting}  Pokémon tipo Lucha </p3></div>`;
 typeFighting.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -463,6 +576,14 @@ typeFighting.map(({num,name,img,height,weight,type,weaknesses}) => document.getE
 
 //Boton tipo Fairy
 document.getElementById("fairy").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFairy}  Pokémon tipo Hada </p3></div>`;
 typeFairy.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -486,6 +607,14 @@ typeFairy.map(({num,name,img,height,weight,type,weaknesses}) => document.getElem
 }
 //Boton tipo Dark
 document.getElementById("dark").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterDark}  Pokémon tipo Oscuridad </p3></div>`;
 typeDark.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -509,6 +638,14 @@ typeDark.map(({num,name,img,height,weight,type,weaknesses}) => document.getEleme
 }
 //Boton tipo Ghost
 document.getElementById("ghost").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGhost}  Pokémon tipo Fantasma </p3></div>`;
 typeGhost.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -533,6 +670,14 @@ typeGhost.map(({num,name,img,height,weight,type,weaknesses}) => document.getElem
 
 //Boton tipo Steel
 document.getElementById("steel").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div id="result"><p3> Existen:  ${counterSteel}  Pokémon tipo Acero </p3></div>`;
 typeSteel.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
@@ -556,6 +701,14 @@ typeSteel.map(({num,name,img,height,weight,type,weaknesses}) => document.getElem
 }
 //Boton tipo Dragon
 document.getElementById("dragon").onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div id="result"> <p3> Existen:  ${counterDragon}  Pokémon tipo Dragón </p3></div>`;
 typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `

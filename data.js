@@ -161,7 +161,7 @@ const totalDragon = typeDragon.reduce(function(sumaDragon, spawn){
 window.typesPokemon;
 window.dataPokemon;
 
-
+/*
 window.data = {
   filterData: (dataPokemon, searchPokemon) => {
     const filterPokemonName = dataPokemon.filter(dataPokemon => (dataPokemon.name === searchPokemon));
@@ -178,6 +178,7 @@ window.data = {
 
   }
 }
+
 // Función Ordenar Alfabeticamente Ascendente
 const dataNames = dataPokemon.map(function(element){ return element.name;});
 const nameAsc = dataNames.sort();
@@ -185,6 +186,7 @@ const nameAsc = dataNames.sort();
 // Ordenar Alfabeticamente Descendente
 const descName = nameAsc.reverse();
 
+*/
 
 
  
