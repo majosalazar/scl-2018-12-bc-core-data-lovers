@@ -157,7 +157,7 @@ document.getElementById("fire").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFire}  Pokémon tipo Fuego </p3></div>`;
 typeFire.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap  col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
@@ -172,6 +172,7 @@ typeFire.map(({num,name,img,height,weight,type,weaknesses}) => document.getEleme
     </div>
   </div>
 </div>
+
 `);
 }
 
@@ -180,20 +181,20 @@ document.getElementById("ice").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterIce}  Pokémon tipo Hielo </p3></div>`;
 typeIce.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
-  <div class="tarjeta-wrap">
-    <div class="tarjeta">
-        <img class="card-img-top" src=${img}> 
-         <p2>${name}</p2>
-          <div class="atras"><p></p>
-            <p>Num: ${num}</p>
-            <p>Altura: ${height}</p>
-            <p>Peso: ${weight}</p>
-            <p>Tipo: ${type}</p>
-            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
-          </div>
-    </div>
+<div class="wrap"> 
+<div class="tarjeta-wrap">
+  <div class="tarjeta">
+      <img class="card-img-top" src=${img}> 
+       <p2>${name}</p2>
+        <div class="atras"><p></p>
+          <p> #: ${num}</p>
+          <p>Altura: ${height}</p>
+          <p>Peso: ${weight}</p>
+          <p>Tipo: ${type}</p>
+          <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
+        </div>
   </div>
+</div>
 </div>
 `);
 }
@@ -203,20 +204,21 @@ document.getElementById("flying").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFlying}  Pokémon tipo Volador </p3></div>`;
 typeFlying.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
-  <div class="tarjeta-wrap">
-    <div class="tarjeta">
-        <img class="card-img-top" src=${img}> 
-         <p2>${name}</p2>
-          <div class="atras"><p></p>
-            <p>Num: ${num}</p>
-            <p>Altura: ${height}</p>
-            <p>Peso: ${weight}</p>
-            <p>Tipo: ${type}</p>
-            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
-          </div>
-    </div>
+<div class="wrap"> 
+<div class="tarjeta-wrap">
+  <div class="tarjeta">
+      <img class="card-img-top" src=${img}> 
+       <p2>${name}</p2>
+        <div class="atras"><p></p>
+          <p> #: ${num}</p>
+          <p>Altura: ${height}</p>
+          <p>Peso: ${weight}</p>
+          <p>Tipo: ${type}</p>
+          <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
+        </div>
   </div>
+</div>
+</div>
 </div>
 `);
 }
@@ -226,13 +228,13 @@ document.getElementById("psychic").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterPsychic}  Pokémon tipo Psíquico </p3></div>`;
 typePsychic.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
@@ -240,6 +242,7 @@ typePsychic.map(({num,name,img,height,weight,type,weaknesses}) => document.getEl
           </div>
     </div>
   </div>
+</div>
 </div>
 `);
 }
@@ -249,13 +252,13 @@ document.getElementById("grass").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGrass}  Pokémon tipo Hierba </p3></div>`;
 typeGrass.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
@@ -263,6 +266,7 @@ typeGrass.map(({num,name,img,height,weight,type,weaknesses}) => document.getElem
           </div>
     </div>
   </div>
+</div>
 </div>
 `);
 }
@@ -272,13 +276,13 @@ document.getElementById("poison").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterPoison}  Pokémon tipo Veneno </p3></div>`;
 typePoison.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
@@ -286,6 +290,7 @@ typePoison.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
           </div>
     </div>
   </div>
+</div>
 </div>
 `);
 }
@@ -295,13 +300,13 @@ document.getElementById("water").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterWater}  Pokémon tipo Agua </p3></div>`;
 typeWater.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
@@ -309,6 +314,7 @@ typeWater.map(({num,name,img,height,weight,type,weaknesses}) => document.getElem
           </div>
     </div>
   </div>
+</div>
 </div>
 `);
 }
@@ -318,13 +324,13 @@ document.getElementById("ground").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGround}  Pokémon tipo Tierra </p3></div>`;
 typeGround.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
@@ -333,6 +339,7 @@ typeGround.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
     </div>
   </div>
 </div>
+</div>
 `);
 }
 //Boton tipo Rock
@@ -340,182 +347,189 @@ document.getElementById("rock").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterRock}  Pokémon tipo Roca </p3></div>`;
 typeRock.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemones: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
     </div>
   </div>
 </div>
+</div>
 `);
-}  
+}
 
 //Boton tipo Electric
 document.getElementById("electric").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterElectric}  Pokémon tipo Eléctrico </p3></div>`;
 typeElectric.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemones: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
     </div>
   </div>
 </div>
+</div>
 `);
-}    
+}
 
 //Boton tipo Bug
 document.getElementById("bug").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterBug}  Pokémon tipo Insecto </p3></div>`;
 typeBug.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemones: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
     </div>
   </div>
 </div>
+</div>
 `);
-}    
+}
 
 //Boton tipo Normal
 document.getElementById("normal").onclick = () => {
 document.getElementById("root").innerHTML = "";document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterNormal}  Pokémon tipo Normal </p3></div>`;
 typeNormal.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemones: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
     </div>
   </div>
 </div>
+</div>
 `);
-}  
+}
   
 //Boton tipo Fighting
 document.getElementById("fighting").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFighting}  Pokémon tipo Lucha </p3></div>`;
 typeFighting.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemones: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
     </div>
   </div>
 </div>
+</div>
 `);
-}    
+}
 
 //Boton tipo Fairy
 document.getElementById("fairy").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterFairy}  Pokémon tipo Hada </p3></div>`;
 typeFairy.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemones: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
     </div>
   </div>
 </div>
+</div>
 `);
-}    
+}
 //Boton tipo Dark
 document.getElementById("dark").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterDark}  Pokémon tipo Oscuridad </p3></div>`;
 typeDark.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemones: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
     </div>
   </div>
 </div>
+</div>
 `);
-}    
+}
 //Boton tipo Ghost
 document.getElementById("ghost").onclick = () => {
 document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div class="result"><p3> Existen:  ${counterGhost}  Pokémon tipo Fantasma </p3></div>`;
 typeGhost.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"> 
+<div class="wrap"> 
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemones: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
     </div>
   </div>
-</div>`
-
-);
-}  
+</div>
+</div>
+`);
+}
 
 //Boton tipo Steel
 document.getElementById("steel").onclick = () => {
@@ -523,44 +537,46 @@ document.getElementById("root").innerHTML = "";
 document.getElementById("root").innerHTML+= `<div id="result"><p3> Existen:  ${counterSteel}  Pokémon tipo Acero </p3></div>`;
 typeSteel.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
 <div class="wrap"> 
-  <div class="tarjeta-wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
-    <div class="tarjeta">
-        <img class="card-img-top" src=${img}> 
-         <p2>${name}</p2>
-          <div class="atras"><p></p>
-            <p>Num: ${num}</p>
-            <p>Altura: ${height}</p>
-            <p>Peso: ${weight}</p>
-            <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemones: ${weaknesses}</p>
-          </div>
-    </div>
-  </div>
-</div>
-`);
-}  
-//Boton tipo Dragon
-document.getElementById("dragon").onclick = () => {
-document.getElementById("root").innerHTML = "";
-document.getElementById("root").innerHTML+= `<div id="result"> <p3> Existen:  ${counterDragon}  Pokémon tipo Dragón </p3></div>`;
-typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
-<div class="wrap col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6 class=row">
   <div class="tarjeta-wrap">
     <div class="tarjeta">
         <img class="card-img-top" src=${img}> 
          <p2>${name}</p2>
           <div class="atras"><p></p>
-            <p>Num: ${num}</p>
+            <p> #: ${num}</p>
             <p>Altura: ${height}</p>
             <p>Peso: ${weight}</p>
             <p>Tipo: ${type}</p>
-            <p>Debilidad con Pokemones: ${weaknesses}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
           </div>
     </div>
   </div>
 </div>
+</div>
 `);
-}  
+}
+//Boton tipo Dragon
+document.getElementById("dragon").onclick = () => {
+document.getElementById("root").innerHTML = "";
+document.getElementById("root").innerHTML+= `<div id="result"> <p3> Existen:  ${counterDragon}  Pokémon tipo Dragón </p3></div>`;
+typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getElementById('root').innerHTML += `
+<div class="wrap"> 
+  <div class="tarjeta-wrap">
+    <div class="tarjeta">
+        <img class="card-img-top" src=${img}> 
+         <p2>${name}</p2>
+          <div class="atras"><p></p>
+            <p> #: ${num}</p>
+            <p>Altura: ${height}</p>
+            <p>Peso: ${weight}</p>
+            <p>Tipo: ${type}</p>
+            <p>Debilidad con Pókemon tipo: ${weaknesses}</p>
+          </div>
+    </div>
+  </div>
+</div>
+</div>
+`);
+}
 
 
 
