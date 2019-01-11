@@ -76,6 +76,7 @@ select151.addEventListener('change', () => {
 })
 //document.getElementById('numReverse').onchange = () => {}
 
+
 //muestra todos los pokemones en cartas individuales en la pagina inicial
 
 dataPokemon.map(({num, name, img, id}) => 

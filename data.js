@@ -178,38 +178,47 @@ window.data = {
 
   }
 }
+// Función Ordenar Alfabeticamente Ascendente
+const dataNames = dataPokemon.map(function(element){ return element.name;});
+const nameAsc = dataNames.sort();
 
-// Graficos
+// Ordenar Alfabeticamente Descendente
+const descName = nameAsc.reverse();
+
+
+
+ 
+// Gráficos
 google.charts.load("current", {packages:["corechart"]});
 google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
 var data = google.visualization.arrayToDataTable([
   ['Task', 'Hours per Day'],
-  ['Fuego',     counterFire],
-  ['Hielo',      counterIce],
-  ['Volador',  counterFlying],
-  ['Psíquico', counterPsychic],
-  ['Hierba ',    counterGrass],
-  ['Veneno ',    counterPoison],
-  ['Agua ',    counterWater],
-  ['Tierra ',    counterGround],
-  ['Roca ',    counterRock],
-  ['Eléctrico ',    counterElectric],
-  ['Insecto ',    counterBug],
-  ['Normal ',    counterNormal],
-  ['Lucha ',    counterFighting],
-  ['Hada ',    counterFairy],
-  ['Oscuridad ',    counterDark],
-  ['Fantasma ',    counterGhost],
-  ['Acero ',    counterSteel],
-  ['Dragon ',    counterDragon]
+  ['Fuego',          counterFire],
+  ['Hielo',           counterIce],
+  ['Volador',      counterFlying],
+  ['Psíquico',    counterPsychic],
+  ['Hierba ',       counterGrass],
+  ['Veneno ',      counterPoison],
+  ['Agua ',         counterWater],
+  ['Tierra ',      counterGround],
+  ['Roca ',          counterRock],
+  ['Eléctrico ', counterElectric],
+  ['Insecto ',        counterBug],
+  ['Normal ',      counterNormal],
+  ['Lucha ',     counterFighting],
+  ['Hada ',         counterFairy],
+  ['Oscuridad ',     counterDark],
+  ['Fantasma ',     counterGhost],
+  ['Acero ',        counterSteel],
+  ['Dragon ',      counterDragon]
 ]);
 
 var options = {
   title: 'Cantidad de Pókemon por Tipo',
   pieHole: 0.5,
-  width: 1000,
-  height: 800,
+  width: 1200,
+  height: 700,
 };
 
 var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
