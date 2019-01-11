@@ -54,7 +54,7 @@ const totalPoison = typePoison.reduce(function(sumaPoison, spawn){
   return sumaPoison + spawn.spawn_chance;
   }, 0);
   const averagePoison=(totalPoison/counterPoison);
-  console.log(averagePoison);
+
 
 //Filter Water
 const typeWater = dataPokemon.filter((types) => {return types.type.indexOf("Water") >=0});
@@ -63,7 +63,6 @@ const totalWater = typeWater.reduce(function(sumaWater, spawn){
   return sumaWater + spawn.spawn_chance;
   }, 0);
   const averageWater=(totalWater/counterWater);
-  console.log(averageWater);
 
 
 //Filter Ground
@@ -73,7 +72,6 @@ const totalGround = typeGround.reduce(function(sumaGround, spawn){
   return sumaGround + spawn.spawn_chance;
   }, 0);
   const averageGround=(totalGround/counterGround);
-  console.log(averageGround);
 
 //Filter Rock
 const typeRock = dataPokemon.filter((types) => {return types.type.indexOf("Rock") >=0});
@@ -82,7 +80,6 @@ const totalRock = typeRock.reduce(function(sumaRock, spawn){
   return sumaRock + spawn.spawn_chance;
   }, 0);
   const averageRock=(totalRock/counterRock);
-  console.log(averageRock);
 
 //Filter Electric
 const typeElectric = dataPokemon.filter((types) => {return types.type.indexOf("Electric") >=0});
@@ -91,7 +88,6 @@ const totalElectric = typeElectric.reduce(function(sumaElectric, spawn){
   return sumaElectric + spawn.spawn_chance;
   }, 0);
   const averageElectric=(totalElectric/counterElectric);
-  console.log(averageElectric);
 
 //Filter Bug
 const typeBug = dataPokemon.filter((types) => {return types.type.indexOf("Bug") >=0});
@@ -100,7 +96,6 @@ const totalBug = typeBug.reduce(function(sumaBug, spawn){
   return sumaBug + spawn.spawn_chance;
   }, 0);
   const averageBug=(totalBug/counterBug);
-  console.log(averageBug);
 
 //Filter Normal
 const typeNormal = dataPokemon.filter((types) => {return types.type.indexOf("Normal") >=0});
@@ -109,7 +104,6 @@ const totalNormal = typeNormal.reduce(function(sumaNormal, spawn){
   return sumaNormal + spawn.spawn_chance;
   }, 0);
   const averageNormal=(totalNormal/counterNormal);
-  console.log(averageNormal);
 
 //Filter Fighting
 const typeFighting = dataPokemon.filter((types) => {return types.type.indexOf("Fighting") >=0});
@@ -118,7 +112,6 @@ const totalFighting = typeFighting.reduce(function(sumaFighting, spawn){
   return sumaFighting + spawn.spawn_chance;
   }, 0);
   const averageFighting=(totalFighting/counterFighting);
-  console.log(averageFighting);
 
 //Filter Fairy
 const typeFairy = dataPokemon.filter((types) => {return types.type.indexOf("Fairy") >=0});
@@ -127,7 +120,6 @@ const totalFairy = typeFairy.reduce(function(sumaFairy, spawn){
   return sumaFairy + spawn.spawn_chance;
   }, 0);
   const averageFairy=(totalFairy/counterFairy);
-  console.log(averageFairy);
 
 
 //Filter Dark
@@ -137,7 +129,6 @@ const totalDark = typeDark.reduce(function(sumaDark, spawn){
   return sumaDark + spawn.spawn_chance;
   }, 0);
   const averageDark=(totalDark/counterDark);
-  console.log(averageDark);
 
 
 //Filter Ghost
@@ -147,7 +138,6 @@ const totalGhost = typeGhost.reduce(function(sumaGhost, spawn){
   return sumaGhost + spawn.spawn_chance;
   }, 0);
   const averageGhost=(totalGhost/counterGhost);
-  console.log(averageGhost);
 
 
 //Filter Steel
@@ -157,7 +147,6 @@ const totalSteel = typeSteel.reduce(function(sumaSteel, spawn){
   return sumaSteel + spawn.spawn_chance;
   }, 0);
   const averageSteel=(totalSteel/counterSteel);
-  console.log(averageSteel);
 
 
 //Filter Dragon
@@ -167,7 +156,6 @@ const totalDragon = typeDragon.reduce(function(sumaDragon, spawn){
   return sumaDragon + spawn.spawn_chance;
   }, 0);
   const averageDragon=(totalDragon/counterDragon);
-  console.log(averageDragon);
 
 
 window.typesPokemon;
@@ -190,38 +178,47 @@ window.data = {
 
   }
 }
+// Función Ordenar Alfabeticamente Ascendente
+const dataNames = dataPokemon.map(function(element){ return element.name;});
+const nameAsc = dataNames.sort();
 
-// Graficos
+// Ordenar Alfabeticamente Descendente
+const descName = nameAsc.reverse();
+
+
+
+ 
+// Gráficos
 google.charts.load("current", {packages:["corechart"]});
 google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
 var data = google.visualization.arrayToDataTable([
   ['Task', 'Hours per Day'],
-  ['Fuego',     counterFire],
-  ['Hielo',      counterIce],
-  ['Volador',  counterFlying],
-  ['Psíquico', counterPsychic],
-  ['Hierba ',    counterGrass],
-  ['Veneno ',    counterPoison],
-  ['Agua ',    counterWater],
-  ['Tierra ',    counterGround],
-  ['Roca ',    counterRock],
-  ['Eléctrico ',    counterElectric],
-  ['Insecto ',    counterBug],
-  ['Normal ',    counterNormal],
-  ['Lucha ',    counterFighting],
-  ['Hada ',    counterFairy],
-  ['Oscuridad ',    counterDark],
-  ['Fantasma ',    counterGhost],
-  ['Acero ',    counterSteel],
-  ['Dragon ',    counterDragon]
+  ['Fuego',          counterFire],
+  ['Hielo',           counterIce],
+  ['Volador',      counterFlying],
+  ['Psíquico',    counterPsychic],
+  ['Hierba ',       counterGrass],
+  ['Veneno ',      counterPoison],
+  ['Agua ',         counterWater],
+  ['Tierra ',      counterGround],
+  ['Roca ',          counterRock],
+  ['Eléctrico ', counterElectric],
+  ['Insecto ',        counterBug],
+  ['Normal ',      counterNormal],
+  ['Lucha ',     counterFighting],
+  ['Hada ',         counterFairy],
+  ['Oscuridad ',     counterDark],
+  ['Fantasma ',     counterGhost],
+  ['Acero ',        counterSteel],
+  ['Dragon ',      counterDragon]
 ]);
 
 var options = {
   title: 'Cantidad de Pókemon por Tipo',
   pieHole: 0.5,
-  width: 1000,
-  height: 800,
+  width: 1200,
+  height: 700,
 };
 
 var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
@@ -233,45 +230,46 @@ google.charts.load('current', {'packages':['bar']});
 
       function drawStuff() {
         var data = new google.visualization.arrayToDataTable([
-          ['Tipo', 'Probabilidad de Encontrar Pókemon por Tipo'],
-          ['Fuego',     counterFire],
-          ['Hielo',      counterIce],
-          ['Volador',  counterFlying],
-          ['Psíquico', counterPsychic],
-          ['Hierba ',    counterGrass],
-          ['Veneno ',    counterPoison],
-          ['Agua ',    counterWater],
-          ['Tierra ',    counterGround],
-          ['Roca ',    counterRock],
-          ['Eléctrico ',    counterElectric],
-          ['Insecto ',    counterBug],
-          ['Normal ',    counterNormal],
-          ['Lucha ',    counterFighting],
-          ['Hada ',    counterFairy],
-          ['Oscuridad ',    counterDark],
-          ['Fantasma ',    counterGhost],
-          ['Acero ',    counterSteel],
-          ['Dragon ',    counterDragon]
+          ['Tipo', 'Probabilidad de Engendro %'],
+          ['Hielo',          averageIce],
+          ['Fuego',         averageFire],
+          ['Volador',     averageFlying],
+          ['Psíquico',   averagePsychic],
+          ['Hierba',       averageGrass],
+          ['Veneno',      averagePoison],
+          ['Agua',         averageWater],
+          ['Tierra',      averageGround],
+          ['Roca',          averageRock],
+          ['Eléctrico', averageElectric],
+          ['Insecto',        averageBug],
+          ['Normal',      averageNormal],
+          ['Lucha',     averageFighting],
+          ['Hada',         averageFairy],
+          ['Oscuridad',     averageDark],
+          ['Fantasma',     averageGhost],
+          ['Acero',        averageSteel],
+          ['Dragon',      averageDragon]
 ]);
 
         var options = {
-          width: 800,
-          legend: { position: 'none' },
+          width: 900,
+          height: 600,
+          legend: { position:'none'},
           chart: {
-            title: 'Promedio de Aparición por Tipo',
-            subtitle: 'Promedio de Aparición por Tipo de Pókemon' },
+            title: 'Promedio de Engendro',
+            subtitle: 'Posibilidad de Engendro por Tipo de Pókemon (%)' },
           axes: {
             x: {
-              0: { side: 'top', label: 'White to move'} // Top x-axis.
+              0: { side: 'top', label: 'POKÉMON POR TIPO'} // Top x-axis.
             }
           },
-          bar: { groupWidth: "90%" }
+          bar: { groupWidth: "100%" }
         };
 
         var chart = new google.charts.Bar(document.getElementById('top_x_div'));
         // Convert the Classic options to Material options.
         chart.draw(data, google.charts.Bar.convertOptions(options));
-      };
+      }
 
 
 
