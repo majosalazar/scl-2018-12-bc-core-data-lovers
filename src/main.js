@@ -138,7 +138,7 @@ dataPokemon.forEach((element) => {
     });
     */
     
-
+    document.getElementById('main').innerHTML = '';
     //imprime en la pantalla la tarjeta de un pokemon
     document.getElementById('main').innerHTML += `
     <div class="card" style="width: 15rem;">
@@ -729,52 +729,48 @@ typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
 </div>
 </div>
 `);
-}
+};
 
 
 
 //filtrar por nombre, busca lo que se le ingresa en el input y lo compara con la info en dataPokemon
-//document.getElementById('btnSearch').onclick = () => {
- // let condition = document.getElementById('searchForName').value;
-  //document.getElementById("root").innerHTML = "";
-  //dataPokemon.filter(element => {
-    //if (element.name === condition) {
+document.getElementById('btnSearchName').onclick = () => {
+  splash.style.display = 'none';
+  sectionNav.style.display = 'block';
+  sectionSelect.style.display = 'none';
+  sectionList.style.display = 'none';
+  sectionMain.style.display = 'none';
+  sectionTypes.style.display = 'none';
+  root.style.display = 'block';
+  sectionStatistcs.style.display = 'none';
+  let condition = document.getElementById('searchForName').value;
+  let filterName = dataPokemon.filter((names) => {return names.name === condition});
 
-    //}
-     
- // })
-  //filtrado
-  //filtered.forEach(element => {
-    /*
-    //permite mostrar los tipos de pokemon de forma invidividual
-    const typesPokemon = element.type
-    let typesPrint = '';
-    typesPokemon.forEach((type) => {
-      typesPrint += `<button class="btn ${type.toLowerCase()}">${type}</button>`
-    });
-    //permite mostrar las debilidades de un pokemon de forma invidividual
-    const weaknessesPokemon = element.weaknesses
-    let weaknessesPrint = '';
-    weaknessesPokemon.forEach((weaknesses) => {
-      weaknessesPrint += `<button class="btn ${weaknesses.toLowerCase()}">${weaknesses}</button>`
-    });
-
-
-    //imprime en la pantalla la tarjeta de un pokemon
-    document.getElementById('root').innerHTML += `
-      <div class="card" style="width: 15rem;">
-        <div class="w-100">
-          <img class="card-img-top" src=${element.img}>
-        </div>
-        <div class="card-body">
-          <p>${element.num}</p>
-          <p>${element.name}</p>
-          <p>Altura: ${element.height}</p>
-          <p>Peso: ${element.weight}</p>
-          <p>Rango de aparición: ${element.spawn_chance}</p>
-        </div>
+  filterName.map(({num, name, img, id}) => 
+  document.getElementById('root').innerHTML += `
+  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
+    <div class="card w-100" style="width: 15rem;">
+      <img class="card-img-top imgPoke" src=${img}>
+      <div class="card-body">
+        <p>${num}</p>
+        <p>${name}</p>
+        <button class="btn btn-more" id="${id}"><i class="fas fa-plus"></i></button>
       </div>
+    </div>
+  </div>
   `
+  );
+};
+
+
+
+
+
+
+//filtrado
+//filtered.forEach(element => {
+    /*
+    
   */
 
   

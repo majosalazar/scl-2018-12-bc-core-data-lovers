@@ -275,12 +275,3 @@ google.charts.load('current', {'packages':['bar']});
 
 
 
-/*
-//filtrar por nombre, busca lo que se le ingresa en el input y lo compara con la info en dataPokemon
-const filterName = (dataPokemon, condition) => {
-  const filteredName = dataPokemon.filter(element => {
-    return element.name === condition
-  })
-  return filteredName;
-};
-*/
