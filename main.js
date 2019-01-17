@@ -744,7 +744,7 @@ document.getElementById('btnSearchName').onclick = () => {
   root.style.display = 'block';
   sectionStatistcs.style.display = 'none';
   let condition = document.getElementById('searchForName').value;
-  let filterName = dataPokemon.filter((names) => {return names.name.toLowerCase() === condition});  
+  let filterName = dataPokemon.filter((names) => {return names.name === condition});  
   filterName.map(({num, name, img, id}) => 
   document.getElementById('root').innerHTML += `
   <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
