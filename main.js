@@ -734,6 +734,7 @@ typeDragon.map(({num,name,img,height,weight,type,weaknesses}) => document.getEle
 
 //filtrar por nombre, busca lo que se le ingresa en el input y lo compara con la info en dataPokemon
 document.getElementById('btnSearchName').onclick = () => {
+  document.getElementById('root').innerHTML = ''; 
   splash.style.display = 'none';
   sectionNav.style.display = 'block';
   sectionSelect.style.display = 'none';
